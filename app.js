@@ -12,7 +12,7 @@ var handlebars = require('express3-handlebars');
  * SET UP ROUTES
  */
 
-//Ominbar routes
+//Omnibar routes
 var index = require('./routes/index');
 var help = require('./routes/help');
 var history = require('./routes/history');
