@@ -17,3 +17,7 @@ exports.view = function(req, res) {
     */
     res.render('nowRide', rideList);
 };
+
+exports.submitted = function(req, res) {
+    res.render('nowRideWaiting');
+};

@@ -25,7 +25,7 @@ function addRide(e) {
 }
 
 function addedRide(data) {
-
+    window.location.href = "movenow-rider-submitted";
     //$('.alert').show();
     //alert.alert();
 }
