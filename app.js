@@ -23,7 +23,7 @@ var settings = require('./routes/settings');
 var cal = require('./routes/calendar');
 var map = require('./routes/map');
 var vehicle = require('./routes/vehicle');
-var loging = require('./routes/vehicle');
+var login = require('./routes/login');
 
 
 var app = express();
