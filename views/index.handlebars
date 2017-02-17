@@ -2,11 +2,12 @@
 <head>
 	<title>WeHaul Test</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <!--NAVBAR CODE-->
@@ -38,7 +39,7 @@
             </div>
             <div class="col-md-2" style="text-align: center;">
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="slider">
                     <div class="slider round"></div>
                 </label>
             </div>
@@ -50,14 +51,14 @@
         <div class="row top-buff" style="text-align: center;">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <a href="map" class="btn btn-primary jumbo-btn"><b>MOVE NOW</b></a>
+                <a href="" class="btn btn-primary jumbo-btn" id="moveNow"><b>MOVE NOW</b></a>
             </div>
             <div class="col-sm-3"></div>
         </div>
         <div class="row top-buff" style="text-align: center;">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <a href="calendar" class="btn btn-primary jumbo-btn"><b>MOVE LATER</b></a>
+                <a href="" class="btn btn-primary jumbo-btn" id="moveLater"><b>MOVE LATER</b></a>
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -66,6 +67,7 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>

@@ -27,6 +27,9 @@ var login = require('./routes/login');
 var confirmation = require('./routes/confirmation');
 var equipment = require('./routes/equipment');
 var request = require('./routes/request');
+var nowRide = require('./routes/nowRide');
+var nowDrive = require('./routes/nowDrive');
+
 
 var app = express();
 
@@ -69,6 +72,10 @@ app.get('/login', login.view);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
 app.get('/request', request.view);
+app.get('/movenow-rider', nowRide.view);
+app.get('/movenow-driver', nowDrive.view);
+app.post('/movenow-driver', nowDrive.addRide);
+app.get('/movenow-rider-submitted', nowRide.submitted);
 
 
 http.createServer(app).listen(app.get('port'), function(){

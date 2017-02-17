@@ -1,0 +1,26 @@
+{
+  "rides": [
+    {
+      "name": "John Doe",
+      "start": "9500 Gilman Dr, La Jolla, CA 90293",
+      "end": "8825 Villa La Jolla Dr, La Jolla, CA 92037",
+      "distance": 1.2,
+      "pic": "http://lorempixel.com/400/400/people/"
+    },
+    {
+      "name": "Jack Doh",
+      "start": "7665 Palmilla Dr, San Diego, CA 92122",
+      "end": "8785 Villa La Jolla Dr, La Jolla, CA 92037",
+      "distance": 3.4,
+      "pic": "http://lorempixel.com/400/400/people/"
+    },
+    {
+      "name": "Jane Dodd",
+      "start": "4703 Judicial Dr, San Diego, CA 92121",
+      "end": "26101 Magic Mountain Pkwy, Valencia, CA 91355",
+      "distance": 5.3,
+      "pic": "http://lorempixel.com/400/400/people/"
+    }
+
+  ]
+}
