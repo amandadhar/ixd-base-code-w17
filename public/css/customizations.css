@@ -82,3 +82,9 @@ input:checked + .slider:before {
     font-weight: 300;
     color: #808080;
 }
+
+.detailsImage {
+    width: 100px;
+    margin: 10px 10px 10px 10px;
+    float: left;
+}

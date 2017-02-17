@@ -12,7 +12,7 @@ function initPage() {
 }
 
 function addRide(e) {
-    //e.preventDefault();
+    e.preventDefault();
 
     $.post("/movenow-driver",
         {
@@ -26,4 +26,6 @@ function addRide(e) {
 
 function addedRide(data) {
 
+    //$('.alert').show();
+    //alert.alert();
 }

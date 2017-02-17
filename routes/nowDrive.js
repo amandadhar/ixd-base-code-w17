@@ -8,6 +8,7 @@ exports.view = function(req, res) {
 };
 
 exports.addRide = function(req, res) {
-    console.log(req.body);
+    //console.log(req.body);
     rideList.rides.push(req.body);
+    res.end();
 };
