@@ -23,6 +23,7 @@ var settings = require('./routes/settings');
 var cal = require('./routes/calendar');
 var map = require('./routes/map');
 var vehicle = require('./routes/vehicle');
+var loging = require('./routes/vehicle');
 
 
 var app = express();
@@ -62,6 +63,7 @@ app.get('/history', history.view);
 app.get('/calendar', cal.view);
 app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
+app.get('/login', login.view)
 
 
 http.createServer(app).listen(app.get('port'), function(){
