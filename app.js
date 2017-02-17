@@ -66,6 +66,7 @@ app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
 app.get('/movenow-rider', nowRide.view);
 app.get('/movenow-driver', nowDrive.view);
+app.post('/movenow-driver', nowDrive.addRide);
 
 
 http.createServer(app).listen(app.get('port'), function(){

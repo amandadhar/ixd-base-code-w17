@@ -3,7 +3,8 @@
  */
 var rideList = require('../riderlist.json');
 
-express.view = function(req, res) {
+exports.view = function(req, res) {
+    /*
     var newRide = {
         name: req.query.name,
         start: req.query.start,
@@ -13,5 +14,6 @@ express.view = function(req, res) {
     };
 
     rideList.rides.push(newRide);
+    */
     res.render('nowRide', rideList);
 };
