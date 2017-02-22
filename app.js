@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var mongoose = require('mongoose');
 
 /**
  * SET UP ROUTES
@@ -29,6 +30,12 @@ var equipment = require('./routes/equipment');
 var request = require('./routes/request');
 var nowRide = require('./routes/nowRide');
 var nowDrive = require('./routes/nowDrive');
+
+//DB CONNECTION
+var local_database_name = 'WeHaul';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name;
+var database_uri = process.env.MONGOLAB_URI || local_database_uri;
+mongoose.connect(database_uri);
 
 
 var app = express();

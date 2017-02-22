@@ -1,14 +1,34 @@
 /**
  * Created by Liam on 2/16/2017.
  */
-var rideList = require('../riderlist.json');
+var models = require("../models");
 
 exports.view = function(req, res) {
-    res.render('nowDrive', rideList);
+    models.rideRequest
+        .find({"resolved": false})
+        .exec(displayRides);
+    function displayRides(err, rides) {
+        if(err) { console.log(err); res.send(500); }
+        console.log(rides);
+        res.render('nowDrive', { 'rides': rides });
+    }
+
 };
 
 exports.addRide = function(req, res) {
-    //console.log(req.body);
-    rideList.rides.push(req.body);
-    res.end();
+    var info = req.body;
+    var newRide = new models.rideRequest({
+        "name": info.name,
+        "start": info.start,
+        "end": info.end,
+        "distance": info.distance,
+        "pic": info.pic,
+        "resolved": false
+    });
+    newRide.save(afterSave);
+    function afterSave(err) {
+        console.log("got here");
+        if(err) { console.log(err); res.send(500); }
+        res.redirect('/movenow-rider-submitted');
+    }
 };
