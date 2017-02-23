@@ -9,32 +9,51 @@ $(document).ready(function() {
 });
 
 function initPage() {
+    ensureLogout();
     checkLogged();
     $("#login").click(loginUser);
 }
 
 function loginUser(e) {
     e.preventDefault();
-    var checkbox = $("#remember");
-    var name = $("#inputEmail");
+    var email = $("#inputEmail");
     var pass = $("#inputPassword");
 
-    console.log(name.val());
-    console.log(pass.val());
+    //console.log(email.val());
+    //console.log(pass.val());
 
-    if(name.val() == username && pass.val() == password) {
-        if(checkbox.is(':checked')) {
-            localStorage.setItem("name", name.val());
-            localStorage.setItem("pass", pass.val());
+    $.post("/",
+        {
+            "email": email.val(),
+            "password": pass.val()
+        }, loggedIn);
+}
+
+function loggedIn(data) {
+    if(data == "bad") {
+        $("#warning").addClass("warningShow");
+        $("#warning").removeClass("warningHidden");
+    } else {
+        if($("#remember").is(':checked')) {
+            localStorage.setItem("email", $("#inputEmail").val());
+            localStorage.setItem("currentUser", data);
+        } else {
+            localStorage.removeItem("email");
         }
         window.location.href = "home";
     }
 }
 
 function checkLogged() {
-    if(localStorage.getItem("name") != null && localStorage.getItem("pass") != null) {
-        $("#inputEmail").val(localStorage.getItem("name"));
-        $("#inputPassword").val(localStorage.getItem("pass"));
+    if(localStorage.getItem("email") != null) {
+        $("#inputEmail").val(localStorage.getItem("email"));
         $("#remember").prop('checked', true);
+    }
+}
+
+//make sure that you don't have more than 1 user logged in at any time
+function ensureLogout() {
+    if(localStorage.getItem("currentUser") != null) {
+        localStorage.removeItem("currentUser");
     }
 }

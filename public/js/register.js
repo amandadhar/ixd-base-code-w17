@@ -14,16 +14,17 @@ function initPage() {
 
 function createUser(e) {
     e.preventDefault();
-    var name = $("#inputEmail");
+    var email = $("#inputEmail");
     var pass = $("#inputPassword");
+    var name = $("#inputName");
 
     //console.log(name.val());
     //console.log(pass.val());
 
     $.post("/register",
         {
-            "name": "",
-            "email": name.val(),
+            "name": name.val(),
+            "email": email.val(),
             "password": pass.val()
         }, madeUser);
 

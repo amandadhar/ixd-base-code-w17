@@ -76,6 +76,7 @@ app.get('/calendar', cal.view);
 app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
 app.get('/', login.view);
+app.post('/', login.login);
 app.get('/register', login.register);
 app.post('/register', login.createUser);
 app.get('/confirmation', confirmation.view);

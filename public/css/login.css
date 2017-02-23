@@ -79,10 +79,10 @@ span.psw{
     padding-top:
 }*/
 
-.emailTaken {
+.warningShow {
   visibility: visible;
 }
 
-.emailNotTaken {
+.warningHidden {
   visibility: hidden;
 }
