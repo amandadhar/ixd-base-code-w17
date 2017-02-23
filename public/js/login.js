@@ -27,7 +27,7 @@ function loginUser(e) {
             localStorage.setItem("name", name.val());
             localStorage.setItem("pass", pass.val());
         }
-        window.location.href = "/";
+        window.location.href = "home";
     }
 }
 
@@ -35,5 +35,6 @@ function checkLogged() {
     if(localStorage.getItem("name") != null && localStorage.getItem("pass") != null) {
         $("#inputEmail").val(localStorage.getItem("name"));
         $("#inputPassword").val(localStorage.getItem("pass"));
+        $("#remember").prop('checked', true);
     }
 }

@@ -9,7 +9,7 @@ exports.view = function(req, res) {
         .exec(displayRides);
     function displayRides(err, rides) {
         if(err) { console.log(err); res.send(500); }
-        console.log(rides);
+        //console.log(rides);
         res.render('nowDrive', { 'rides': rides });
     }
 
@@ -27,8 +27,7 @@ exports.addRide = function(req, res) {
     });
     newRide.save(afterSave);
     function afterSave(err) {
-        console.log("got here");
         if(err) { console.log(err); res.send(500); }
-        res.redirect('/movenow-rider-submitted');
+        res.end();
     }
 };

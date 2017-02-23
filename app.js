@@ -65,7 +65,7 @@ if ('development' == app.get('env')) {
  */
 
 //Omnibar routes
-app.get('/', index.view);
+app.get('/home', index.view);
 app.get('/payment', payment.view);
 app.get('/settings', settings.view);
 app.get('/help', help.view);
@@ -75,9 +75,12 @@ app.get('/history', history.view);
 app.get('/calendar', cal.view);
 app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
-app.get('/login', login.view);
+app.get('/', login.view);
+app.get('/register', login.register);
+app.post('/register', login.createUser);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
+
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
 app.get('/movenow-driver', nowDrive.view);

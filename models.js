@@ -12,4 +12,12 @@ var rideRequestSchema = new Mongoose.Schema({
     "resolved": Boolean
 });
 
+var userSchema = new Mongoose.Schema({
+    "name": String,
+    "email": String,
+    "password": String,
+    "home": String
+});
+
 exports.rideRequest = Mongoose.model('rideRequest', rideRequestSchema);
+exports.user = Mongoose.model('user', userSchema);
