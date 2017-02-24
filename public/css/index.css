@@ -1,7 +1,7 @@
 .background { 
     background-color: #0A2E36;
     position: relative;
-    width: 1200px; 
+    width: 900px; 
     top: -10px; 
     height: 800px;
 }
@@ -18,15 +18,3 @@ ul.breadcrumb li+li:before {
     content: "/\00a0";
 }
 ul.breadcrumb li a {color: green;}
-
-.container {
-	border: 3px solid #CAFFB9;
-	margin: -10px;
-	position: relative; 
-    width: 300px;
-    height: 210px;
-    background-color: #C0D461;
-    color: #2E4057;
-    font-size: 18px;
-    line-height: 0.5;
-}

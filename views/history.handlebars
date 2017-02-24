@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
     <link rel="stylesheet" href="css/history.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
     <!--NAVBAR CODE-->
@@ -32,7 +32,18 @@
         </div>
     </nav>
 
-    <div class = "background">
+<div class="background">
+
+<div class="left-align text" style= "color: #66a182; margin: 25px;">
+    <h1>Past Moves</h1>
+</div>
+    <style>
+    .container {
+    border: 1px solid;
+    width: 300px;
+    margin: 10px;
+    }
+    </style>
         {{#each history}}
 
             <div class ="container" style = "text-align: left; left: 50px; top: 30px;">
@@ -42,6 +53,8 @@
             </div>
         {{/each}}
     </div>
+</div>
+
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
