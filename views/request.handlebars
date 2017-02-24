@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
+    <link rel="stylesheet" href="css/request.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
 <!--NAVBAR CODE-->
@@ -16,7 +18,6 @@
             <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
             <ul class="dropdown-menu">
                 <li><a href="home">Home</a></li>
-                <li><a href="payment">Payment</a></li>
                 <li><a href="settings">Account Settings</a></li>
                 <li><a href="help">Help &amp; FAQ</a></li>
                 <li><a href="history">History</a></li>
@@ -24,12 +25,27 @@
                 <li><a href="/">Logout</a></li>
             </ul>
         </div>
-        <div class="nav navbar-nav">
-            <h2>WEHAUL</h2>
+        <div class="nav navbar-nav" style = "position: relative;">
+                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
+                    <h1 style="font-size: 25px; top: -45px; color: #66a182;">Request Mover</h1>
         </div>
     </div>
 </nav>
-<h2>Request Screen Placeholder Page</h2>
+
+<div class="background">
+
+    <ul class="breadcrumb">
+        <li><a href="/">Move Now/Later</a></li>
+        <li><a href="vehicle">Select Vehicle &amp Equipment</a></li>
+        <li>Request Mover</li>
+        <li><a href="confirmation">Confirmation</a></li>
+    </ul>
+
+    <div class="container" style="top: 40px; left: 20px;">
+        <p class="center"> VEHICLE...<br/>NUMBER OF MOVERS...<br>EXTRA EQUIPMENT...</p>
+    </div>
+    <a href="#" class="btn btn-default btn-lg">Request Mover</a>
+</div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

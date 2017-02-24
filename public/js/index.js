@@ -21,8 +21,10 @@ function toggleRiderDriver(e) {
     rider = !rider;
     if(rider === true) {
         console.log("RIDER MODE");
+        document.getElementById("moveNow").innerHTML = "<b>View Ride Requests<b>";
     } else if(rider === false) {
         console.log("DRIVER MODE");
+        document.getElementById("moveNow").innerHTML = "<b>View Potential Pickups<b>";
     }
 }
 

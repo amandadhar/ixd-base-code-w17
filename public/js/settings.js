@@ -7,14 +7,8 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-	$("#update").click(function(e) {
-	});
-
-	// Add any additional listeners here
-	// example: $("#div-id").click(functionToCall);
 	$("a.thumbnail").click(projectClick);
 
-	//timer = setTimeout(back, 3000);
 }
 function projectClick(e) { 
     // prevent the page from reloading      
@@ -22,16 +16,19 @@ function projectClick(e) { 
 
 }
 
-function updateName(){
+function updateName(e){
 	var person = prompt("Please enter your new name", "");
 
 	if(person.length<1){
 		document.getElementById("errname").innerHTML = "Please write a valid name";
+		e.preventDefault();
 
 	}
-	else if(person!=null){
+	else if(person!=""){
 		document.getElementById("name").innerHTML = person;
 		document.getElementById("errname").innerHTML = "";
+		e.preventDefault();
+
 		$.post('/settings',
 			{
 				"name": person,
@@ -41,17 +38,18 @@ function updateName(){
 	}
 }
 
-
-
-function updateAddress(){
+function updateAddress(e){
 	var address = prompt("Please enter your new address", "");
 
 	if(address.length<1){
 		document.getElementById("erraddress").innerHTML = "Please write a valid address";
+		e.preventDefault();
+
 	}
-	else if(address!=null){
+	else if(address!=""){
 		document.getElementById("address").innerHTML = address;
 		document.getElementById("erraddress").innerHTML = "";
+		e.preventDefault();
 		$.post('/settings',
 			{
 				"home": address,

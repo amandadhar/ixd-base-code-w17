@@ -1,0 +1,25 @@
+.container {
+    border: 3px solid transparent;
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    background-color: #C0D461;
+    line-height: 0.9;
+    position: relative;
+    text-align: center;
+}
+
+.header {
+	border:;
+	margin:;
+	background-color:;
+	color: #66a182;
+	font-size: 25px;
+	position: relative;
+	text-align: center;
+}
+
+.background{
+	background-color: #0A2E36;
+	position: relative;
+}
