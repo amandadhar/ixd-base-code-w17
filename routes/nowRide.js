@@ -3,6 +3,7 @@
  */
 var userInfo = require('../userInfo.json');
 var models = require("../models");
+var pickup = require("../accepted.json");
 
 exports.view = function(req, res) {
     res.render('nowRide', userInfo);
@@ -22,9 +23,11 @@ exports.accept = function(req, res) {
 
         rides[0].resolved = true;
         rides[0].save(finishAndReturn);
+
         function finishAndReturn(err) {
             if(err) { console.log(err); res.send(500); }
-            res.render('nowDriveAccepted', rides[0]);
+            pickup.accepted.push(rides[0]);
+            res.end();
         }
     }
 };

@@ -21,10 +21,10 @@ function toggleRiderDriver(e) {
     rider = !rider;
     if(rider === true) {
         console.log("RIDER MODE");
-        $("#moveNow").html("<a href='' class='btn btn-primary jumbo-btn' id='moveNow'> <b>Make A Ride Request</b></a>");
+        $("#moveNow").html("<b>Make A Ride Request</b>");
     } else if(rider === false) {
         console.log("DRIVER MODE");
-        $("#moveNow").html("<a href='' class='btn btn-primary jumbo-btn' id='moveNow'> <b>View Potential Pickups</b></a>");
+        $("#moveNow").html("<b>View Potential Pickups</b>");
     }
 }
 

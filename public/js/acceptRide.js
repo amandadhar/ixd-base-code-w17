@@ -22,5 +22,5 @@ function acceptRide(e) {
 }
 
 function acceptedRide(data) {
-
+    window.location.href = "movenow-driver-accepted";
 }

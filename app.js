@@ -84,6 +84,7 @@ app.get('/movenow-rider', nowRide.view);
 app.post('/movenow-rider', nowRide.accept);
 app.get('/movenow-driver', nowDrive.view);
 app.post('/movenow-driver', nowDrive.addRide);
+app.get('/movenow-driver-accepted', nowDrive.pickup);
 app.get('/movenow-rider-submitted', nowRide.submitted);
 
 

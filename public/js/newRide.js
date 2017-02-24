@@ -9,28 +9,34 @@ $(document).ready(function() {
 
 function initPage() {
     $("#submitBtn").click(addRide);
-    //if("window.history.forward()" === )
-    //do a submit
 }
 
 function addRide(e) {
-    if($("#name").val() !=="" && $("#location").val()!=="" && $("#destination").val()!==""){
+    e.preventDefault();
+
+    var name = $("#name").text();
+    var loc = $("#location").val();
+    var dest = $("#destination").val();
+    if(name !="" && loc!="" && dest!=""){
         console.log("before post");
       $.post("/movenow-driver",
         {
-            "name": $("#name").val(),
-            "start": $("#location").val(),
-            "end": $("#destination").val(),
-            "distance": (Math.round(Math.random() * 20)) / 10,
-            "pic": "http://lorempixel.com/400/400/people"
+            "name": name,
+            "start": loc,
+            "end": dest
+            //"distance": (Math.round(Math.random() * 20)) / 10,
+            //"pic": "http://lorempixel.com/400/400/people"
         },
             addedRide);
+    } else {
+        console.log("something's wrong");
+        console.log(name);
+        console.log(loc);
+        console.log(dest);
     }
 
 }
 
 function addedRide(data) {
     window.location.href = "movenow-rider-submitted";
-    //$('.alert').show();
-    //alert.alert();
 }

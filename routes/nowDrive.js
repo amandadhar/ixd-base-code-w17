@@ -2,6 +2,7 @@
  * Created by Liam on 2/16/2017.
  */
 var models = require("../models");
+var picked = require("../accepted.json");
 
 exports.view = function(req, res) {
     models.rideRequest
@@ -31,4 +32,8 @@ exports.addRide = function(req, res) {
         if(err) { console.log(err); res.send(500); }
         res.end();
     }
+};
+
+exports.pickup = function(req, res) {
+    res.render('nowDriveAccepted', picked);
 };
