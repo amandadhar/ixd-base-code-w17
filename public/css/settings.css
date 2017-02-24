@@ -1,0 +1,23 @@
+  .container1 {
+    border: 1px solid;
+    width: 200px;
+    left-margin: 500px;
+    background-position: -100px;
+    font-size: 150%
+}
+
+  .container {
+    border: 1px solid;
+    width: 200px;
+    height: 52px;
+    margin: 5px;
+    background-position: -200px;
+}
+
+#errname{
+    color: red;
+}
+
+#erraddress{
+    color: red;
+}

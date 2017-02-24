@@ -9,19 +9,24 @@ $(document).ready(function() {
 
 function initPage() {
     $("#submitBtn").click(addRide);
+    //if("window.history.forward()" === )
+    //do a submit
 }
 
 function addRide(e) {
-    e.preventDefault();
-
-    $.post("/movenow-driver",
+    if($("#name").val()!=="" && $("#location").val()!=="" && $("#destination").val()!==""){
+        console.log("before post");
+      $.post("/movenow-driver",
         {
             "name": $("#name").val(),
             "start": $("#location").val(),
             "end": $("#destination").val(),
             "distance": (Math.round(Math.random() * 20)) / 10,
             "pic": "http://lorempixel.com/400/400/people"
-        }, addedRide);
+        },
+            addedRide);
+    }
+
 }
 
 function addedRide(data) {

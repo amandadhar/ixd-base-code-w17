@@ -1,12 +1,13 @@
 <html>
 <head>
-    <title>WeHaul Test</title>
+    <title>WeHaul Demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
+    <link rel="stylesheet" href="css/settings.css"> 
 </head>
 <body>
 <!--NAVBAR CODE-->
@@ -29,9 +30,45 @@
         </div>
     </div>
 </nav>
-<h2>Settings Placeholder Page</h2>
+<div class="row top-buff" style = "text-align: center;">
+        <h2>Settings</h2>
+</div>
+<div style = "position:relative; left:200px; top:20px; 
+font-size:150%;">
+    <h4>Name</h4>
+</div>
+
+<div style = "position:relative; left:480px; top:-10px; font-size:150%;">
+    <h4>Address</h4>
+</div>
+
+<div class ="container" id = "name" style ="text-align:center; position:relative; left:120px; top:-20px; font-size:100%;">
+        <p>test</p>
+</div>
+
+<div id="errname" style = "position: fixed; bottom: 290px; right: 1000px;">   
+</div>
+
+    &nbsp; &nbsp; &nbsp; &nbsp;
+
+<div class= "container" id = "address" style ="text-align: center; position:relative; left:420px; top:-102px; font-size:100%;">
+        <p>9450 Gilman Dr.
+            La Jolla, Ca 92092</p>
+</div>
+
+<div id="erraddress" style = "position: fixed; bottom: 290px; right: 690px;a">   
+</div>
+
+<div style = "text-align: center; position:fixed; right:1000px; bottom:335px; font-size:100%;">
+    <button onclick = "updateName()"> <a href = "#" >Update name?</a> </button>
+</div>
+
+<div style = "text-align: center; position:fixed; right:690px; bottom:335px; font-size:100%;">
+    <button onclick = "updateAddress()"> <a href = "#1" >Update address?</a> </button>
+</div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/settings.js"></script>
 </body>
 </html>
