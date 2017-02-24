@@ -9,5 +9,5 @@ exports.view = function(req, res){
 };
 
 exports.initialize = function(req, res) {
-    userInfo.history[0].date = new Date();
+
 };

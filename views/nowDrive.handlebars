@@ -33,12 +33,12 @@
         <h1>Current Ride Requests</h1>
         {{#each rides}}
             <div class="panel panel-default ride">
-                <img src="{{pic}}" class="detailsImage">
+                <span class="glyphicon glyphicon-road detailsImage"></span>
                 <h4><b>{{name}}</b></h4>
                 <p><b>Current Location:</b> {{start}}</p>
                 <p><b>Destination:</b> {{end}}</p>
-                <p><b>Distance from You:</b> {{distance}} miles</p>
-                <p><a class="btn btn-default">Accept Request</a></p>
+                <p><b>Requested:</b> {{date}}</p>
+                <p><a class="btn btn-default acceptBtn" id="accept{{_id}}">Accept Request</a></p>
             </div>
         {{/each}}
     </div>
@@ -46,5 +46,6 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/acceptRide.js"></script>
 </body>
 </html>

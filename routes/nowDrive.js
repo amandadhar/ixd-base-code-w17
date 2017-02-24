@@ -21,9 +21,10 @@ exports.addRide = function(req, res) {
         "name": info.name,
         "start": info.start,
         "end": info.end,
-        "distance": info.distance,
-        "pic": info.pic,
-        "resolved": false
+        //"distance": info.distance,
+        //"pic": info.pic,
+        "resolved": false,
+        "date": new Date().toLocaleString()
     });
     newRide.save(afterSave);
     function afterSave(err) {

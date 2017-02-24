@@ -12,7 +12,6 @@ $(document).ready(function() {
 function initPage() {
     $("#slider").click(toggleRiderDriver);
     $("#moveNow").click(moveNow);
-    $("#moveLater").click(moveLater);
 }
 
 function toggleRiderDriver(e) {
@@ -22,10 +21,10 @@ function toggleRiderDriver(e) {
     rider = !rider;
     if(rider === true) {
         console.log("RIDER MODE");
-        document.getElementById("moveNow").innerHTML = "<b>Make A Ride Request<b>";
+        $("#moveNow").html("<a href='' class='btn btn-primary jumbo-btn' id='moveNow'> <b>Make A Ride Request</b></a>");
     } else if(rider === false) {
         console.log("DRIVER MODE");
-        document.getElementById("moveNow").innerHTML = "<b>View Potential Pickups<b>";
+        $("#moveNow").html("<a href='' class='btn btn-primary jumbo-btn' id='moveNow'> <b>View Potential Pickups</b></a>");
     }
 }
 
@@ -36,15 +35,5 @@ function moveNow(e) {
         window.location.href = "movenow-rider";
     } else if(rider === false) {
         window.location.href = "movenow-driver";
-    }
-}
-
-function moveLater(e) {
-    e.preventDefault();
-
-    if(rider === true) {
-        window.location.href = "calendar";
-    } else if(rider === false) {
-        window.location.href = "calendar";
     }
 }

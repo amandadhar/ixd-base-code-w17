@@ -1,14 +1,12 @@
 <html>
 <head>
-    <title>WeHaul Demo</title>
+    <title>WeHaul Test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
-    <link rel="stylesheet" href="css/history.css">
-
 </head>
 <body>
     <!--NAVBAR CODE-->
@@ -25,24 +23,22 @@
                     <li><a href="/">Logout</a></li>
                 </ul>
             </div>
-            <div class="nav navbar-nav" style = "position: relative;">
-                    <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
-                        <h1 style="font-size: 25px; top: -45px; color: #66a182;">History</h1>
+            <div class="nav navbar-nav">
+                <h2>WEHAUL</h2>
             </div>
         </div>
     </nav>
 
-    <div class = "background">
-        {{#each history}}
-
-            <div class ="container" style = "text-align: left; left: 50px; top: 30px;">
-                <p>Last Ride: {{date}}</p>
-                <p>From: {{start}} </p>
-                <p>To: {{end}}</p>
-            </div>
-        {{/each}}
+    <div class="container" style="text-align:center">
+        <h2>You Are Moving</h2>
+        <h4><b>{{name}}</b></h4>
+        <h2>Please Proceed To</h2>
+        <h4><b>{{start}}</b></h4>
+        <h2>Then</h2>
+        <h4><b>{{end}}</b></h4>
     </div>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

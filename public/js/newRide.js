@@ -14,7 +14,7 @@ function initPage() {
 }
 
 function addRide(e) {
-    if($("#name").val()!=="" && $("#location").val()!=="" && $("#destination").val()!==""){
+    if($("#name").val() !=="" && $("#location").val()!=="" && $("#destination").val()!==""){
         console.log("before post");
       $.post("/movenow-driver",
         {

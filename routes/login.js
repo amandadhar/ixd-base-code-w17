@@ -28,7 +28,8 @@ exports.createUser = function(req, res) {
                 "name": info.name,
                 "email": info.email,
                 "password": info.password,
-                "home": ""
+                "home": "",
+                "history": []
             });
             userInfo.name = newUser.name;
             newUser.save(addNewUser);
@@ -53,6 +54,7 @@ exports.login = function(req, res) {
                 res.send("bad");
             } else {
                 userInfo.name = users[0].name;
+                userInfo.history = users[0].history;
                 res.send(users[0]._id);
             }
         } else {
