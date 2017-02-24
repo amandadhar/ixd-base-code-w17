@@ -31,3 +31,27 @@ exports.accept = function(req, res) {
         }
     }
 };
+
+exports.check = function(req, res) {
+    var request = userInfo.currentRequest;
+    models.rideRequest
+        .find({_id: request})
+        .exec(evalStatus);
+    function evalStatus(err, found) {
+        if(err) { console.log(err); res.send(500); }
+        if(found.length != 0) {
+            if(found[0].resolved == true) {
+                userInfo.history.push(found[0]);
+                userInfo.currentRequest = "";
+                found[0].remove();
+                res.send("some");
+            }
+        } else {
+            res.send("none");
+        }
+    }
+};
+
+exports.accepted = function(req, res) {
+  res.render("nowRideAccepted");
+};

@@ -15,7 +15,18 @@ function back(){
 }
 
 function decrementInterval() {
-	console.log(timeout);
+	//console.log(timeout);
 	timeout = timeout-1;
 	$("#time").html("<span id='time'>" + timeout + "</span>");
+	$.post('/checkStatus', {
+			"id": localStorage.get("currentUser")
+		},evaluate);
+}
+
+function evaluate(data) {
+	if(data == "none") {
+		console.log("No driver found yet");
+    } else {
+        window.location.href = "movenow-rider-accepted";
+    }
 }

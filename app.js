@@ -82,10 +82,13 @@ app.get('/equipment', equipment.view);
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
 app.post('/movenow-rider', nowRide.accept);
+app.get('/movenow-rider-accepted', nowRide.accepted);
 app.get('/movenow-driver', nowDrive.view);
 app.post('/movenow-driver', nowDrive.addRide);
 app.get('/movenow-driver-accepted', nowDrive.pickup);
 app.get('/movenow-rider-submitted', nowRide.submitted);
+
+app.post('/checkStatus', nowRide.check);
 
 
 http.createServer(app).listen(app.get('port'), function(){
