@@ -2,13 +2,13 @@
 <head>
     <title>WeHaul Demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
     <link rel="stylesheet" href="css/history.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
 <!--NAVBAR CODE-->
@@ -17,7 +17,7 @@
         <div class="navbar-header">
             <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
             <ul class="dropdown-menu">
-                <li><a href="home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="settings">Account Settings</a></li>
                 <li><a href="help">Help &amp; FAQ</a></li>
                 <li><a href="history">History</a></li>
@@ -32,19 +32,30 @@
     </div>
 </nav>
 
-<div class = "background">
-    <div class ="container" style = "text-align: left; left: 50px; top: 30px;">
+<div class="background">
+
+<div class="left-align text" style= "color: #66a182; margin: 25px;">
+    <h1>Past Moves</h1>
+</div>
+    <style>
+    .container {
+    border: 1px solid;
+    width: 300px;
+    margin: 10px;
+    }
+    </style>
+
+    <div class ="container" style = "color: #66a182; text-align: left;">
     <p>Last Ride: 02/16/2017</p>
     <p>With: Brandon </p>
-    <p>Cost: 300$</p>
     </div>
 
-    <div class ="container" style = "text-align: left; left: 50px; top: 60px;">
+    <div class ="container" style = "color: #66a182; text-align: left;">
     <p>Last Ride: 02/15/2017</p>
     <p>With: Petter </p>
-    <p>Cost: 1000$</p>
     </div>
 </div>
+
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>

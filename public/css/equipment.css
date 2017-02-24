@@ -1,7 +1,7 @@
 .background { 
     background-color: #0A2E36;
     position: relative;
-    width: 1200px; 
+    width: 800px; 
     top: -10px; 
     height: 800px;
 }
@@ -19,6 +19,14 @@ ul.breadcrumb li+li:before {
 }
 ul.breadcrumb li a {color: green;}
 
+.background { 
+    background-color: #0A2E36;
+    position: relative;
+    width: 1200px; 
+    top: -10px; 
+    height: 800px;
+}
+
 .container {
 	border: 3px solid #CAFFB9;
 	margin: -10px;
@@ -28,5 +36,5 @@ ul.breadcrumb li a {color: green;}
     background-color: #C0D461;
     color: #2E4057;
     font-size: 18px;
-    line-height: 0.5;
+    line-height: 1.8;
 }
