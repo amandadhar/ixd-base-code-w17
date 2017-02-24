@@ -1,5 +1,5 @@
 var models = require("../models");
-
+var userinfo = require("../userInfo.json");
 // Login screen
 exports.view = function(req, res){
     res.render('login', { "status": "warningHidden" });
@@ -51,6 +51,7 @@ exports.login = function(req, res) {
             if(users[0].password != info.password) {
                 res.send("bad");
             } else {
+                userinfo.name = users[0].name;
                 res.send(users[0]._id);
             }
         } else {

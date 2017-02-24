@@ -68,6 +68,7 @@ if ('development' == app.get('env')) {
 app.get('/home', index.view);
 app.get('/payment', payment.view);
 app.get('/settings', settings.view);
+app.post('/settings', settings.update);
 app.get('/help', help.view);
 app.get('/history', history.view);
 
