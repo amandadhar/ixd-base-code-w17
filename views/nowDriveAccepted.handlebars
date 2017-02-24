@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="css/customizations.css">
 </head>
 <body>
-    <!--NAVBAR CODE-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
-                <ul class="dropdown-menu">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="settings">Account Settings</a></li>
-                    <li><a href="help">Help &amp; FAQ</a></li>
-                    <li><a href="history">History</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </div>
-            <div class="nav navbar-nav">
-                <h2>WEHAUL</h2>
-            </div>
+<!--NAVBAR CODE-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
+            <ul class="dropdown-menu">
+                <li><a href="home">Home</a></li>
+                <li><a href="settings">Account Settings</a></li>
+                <li><a href="help">Help &amp; FAQ</a></li>
+                <li><a href="history">History</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
         </div>
-    </nav>
+        <div class="nav navbar-nav" style = "position: relative;">
+            <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
+            <h1 style="font-size: 25px; top: -45px; color: #66a182;">History</h1>
+        </div>
+    </div>
+</nav>
     {{#each accepted}}
         <div class="container" style="text-align:center">
             <h2>You Are Moving</h2>
