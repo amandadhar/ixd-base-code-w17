@@ -1,0 +1,49 @@
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {color: green;}
+
+.background { 
+    background-color: #0A2E36;
+    position: relative;
+    width: 800px; 
+    top: -10px; 
+    height: 800px;
+}
+
+.container {
+	border: 3px solid #CAFFB9;
+	margin: -10px;
+	position: relative; 
+    width: 450px;
+    height: 150px;
+    background-color: #C0D461;
+    color: #2E4057;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    left: 20 px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.btn {
+	position: relative; 
+	left: 150px; 
+	top: 80px;
+	color: #66a182;
+}

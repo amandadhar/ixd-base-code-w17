@@ -1,0 +1,55 @@
+.bg-1 { 
+    background-color: #0A2E36;
+    position: relative;
+    width: 800px; 
+    top: -10px; 
+    height: 800px;
+}
+
+
+.container {
+	border: 3px solid #CAFFB9;
+	margin: -10px;
+	position: relative; 
+    width: 450px;
+    height: 150px;
+    background-color: #C0D461;
+    color: #2E4057;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+ul.breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {color: green;}
+
+.check {
+	height: 40px;
+	width: 30px;
+}
+
+.visa {
+	height: 20px; 
+	width: 30px;
+}
+
+.driver {
+	height: 80px; 
+	width: 140px; 
+	top: 10px;
+}
+
+.ratings {
+	height: 30px; 
+	width: 110px; 
+	vertical align: text-top;
+}
