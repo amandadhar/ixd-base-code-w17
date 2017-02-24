@@ -36,10 +36,10 @@ function loggedIn(data) {
     } else {
         if($("#remember").is(':checked')) {
             localStorage.setItem("email", $("#inputEmail").val());
-            localStorage.setItem("currentUser", data);
         } else {
             localStorage.removeItem("email");
         }
+        localStorage.setItem("currentUser", data);
         window.location.href = "home";
     }
 }

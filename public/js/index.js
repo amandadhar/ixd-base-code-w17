@@ -17,11 +17,12 @@ function initPage() {
 
 function toggleRiderDriver(e) {
     //e.preventDefault();
+    //prevent default not needed as slider animation won't play otherwise
 
     rider = !rider;
     if(rider === true) {
         console.log("RIDER MODE");
-        document.getElementById("moveNow").innerHTML = "<b>View Ride Requests<b>";
+        document.getElementById("moveNow").innerHTML = "<b>Make A Ride Request<b>";
     } else if(rider === false) {
         console.log("DRIVER MODE");
         document.getElementById("moveNow").innerHTML = "<b>View Potential Pickups<b>";

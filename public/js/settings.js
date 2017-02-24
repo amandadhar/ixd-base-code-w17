@@ -21,13 +21,13 @@ function updateName(e){
 
 	if(person.length<1){
 		document.getElementById("errname").innerHTML = "Please write a valid name";
-		e.preventDefault();
+		//e.preventDefault();
 
 	}
 	else if(person!=""){
 		document.getElementById("name").innerHTML = person;
 		document.getElementById("errname").innerHTML = "";
-		e.preventDefault();
+		//e.preventDefault();
 
 		$.post('/settings',
 			{
@@ -43,13 +43,13 @@ function updateAddress(e){
 
 	if(address.length<1){
 		document.getElementById("erraddress").innerHTML = "Please write a valid address";
-		e.preventDefault();
+		//e.preventDefault();
 
 	}
 	else if(address!=""){
 		document.getElementById("address").innerHTML = address;
 		document.getElementById("erraddress").innerHTML = "";
-		e.preventDefault();
+		//e.preventDefault();
 		$.post('/settings',
 			{
 				"home": address,
@@ -58,7 +58,9 @@ function updateAddress(e){
 	}
 }
 //placeholder callbacks for POST requests
-function nameChanged(data) {}
+function nameChanged(data) {
+	console.log("yo");
+}
 function addressChanged(data) {}
 
 /*function back(){

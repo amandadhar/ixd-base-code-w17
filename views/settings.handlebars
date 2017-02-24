@@ -2,7 +2,7 @@
 <head>
     <title>WeHaul Demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -42,7 +42,7 @@
     </div>
 
     <div class ="container" id = "name" style ="text-align:center; position:relative; left:40px; top:-20px; font-size:250%;">
-            <p>test</p>
+            <p>{{name}}</p>
     </div>
 
     <div id="errname" style = "position: absolute; bottom: 520px; right: 490px; font-size:150%;">
@@ -51,19 +51,18 @@
         &nbsp; &nbsp; &nbsp; &nbsp;
 
     <div class= "container" id = "address" style ="text-align: center; position:relative; left:420px; top:-160px; font-size:250%;">
-            <p>9450 Gilman Dr.
-                La Jolla, Ca 92092</p>
+            <p>{{home}}</p>
     </div>
 
     <div id="erraddress" style = "position: absolute; bottom: 520px; right: 120px; font-size:150%;">
     </div>
 
     <div style = "text-align: center; position: absolute; right:534px; bottom:560px; font-size:150%;">
-        <button onclick = "updateName()"> <a href = "#" >Update name?</a> </button>
+        <button onclick = "updateName()"> <a href = "" >Update name?</a> </button>
     </div>
 
     <div style = "text-align: center; position: absolute; right:150px; bottom:560px; font-size:150%;">
-        <button onclick = "updateAddress()"> <a href = "#1" >Update address?</a> </button>
+        <button onclick = "updateAddress()"> <a href = "" >Update address?</a> </button>
     </div>
 </div>
 
