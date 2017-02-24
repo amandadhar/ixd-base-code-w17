@@ -16,12 +16,9 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var help = require('./routes/help');
 var history = require('./routes/history');
-var payment = require('./routes/payment');
 var settings = require('./routes/settings');
 
 //Additional routes
-var cal = require('./routes/calendar');
-var map = require('./routes/map');
 var vehicle = require('./routes/vehicle');
 var login = require('./routes/login');
 var confirmation = require('./routes/confirmation');
@@ -59,14 +56,11 @@ if ('development' == app.get('env')) {
 
 //Omnibar routes
 app.get('/', index.view);
-app.get('/payment', payment.view);
 app.get('/settings', settings.view);
 app.get('/help', help.view);
 app.get('/history', history.view);
 
 //Additional routes
-app.get('/calendar', cal.view);
-app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
 app.get('/login', login.view);
 app.get('/confirmation', confirmation.view);
