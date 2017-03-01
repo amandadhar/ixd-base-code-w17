@@ -34,17 +34,32 @@ exports.accept = function(req, res) {
 
 exports.check = function(req, res) {
     var request = userInfo.currentRequest;
+    //find the ride being accepted using rideRequest ID
     models.rideRequest
         .find({_id: request})
         .exec(evalStatus);
     function evalStatus(err, found) {
         if(err) { console.log(err); res.send(500); }
-        if(found.length != 0) {
+        //if the rideRequest ID returns a real unresolved ride, find the associated User and add it to their history.
+        if(found && found.length != 0) {
             if(found[0].resolved == true) {
                 userInfo.history.push(found[0]);
                 userInfo.currentRequest = "";
                 found[0].remove();
-                res.send("some");
+                models.user
+                    .find({_id: userInfo.currentUser})
+                    .exec(finish);
+                function finish(err, users) {
+                    if(err) { console.log(err); res.send(500); }
+                    if(users && users[0]) {
+                        users[0].history = userInfo.history;
+                        users[0].save(andExit);
+                        function andExit(err) {
+                            if(err) {console.log(err); res.send(500);}
+                            res.send("some");
+                        }
+                    }
+                }
             }
         } else {
             res.send("none");

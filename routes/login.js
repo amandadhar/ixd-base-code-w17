@@ -57,6 +57,7 @@ exports.login = function(req, res) {
                 userInfo.name = users[0].name;
                 userInfo.history = users[0].history;
                 userInfo.home = users[0].home;
+                userInfo.currentUser = users[0]._id;
                 res.send(users[0]._id);
             }
         } else {
