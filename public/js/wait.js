@@ -19,7 +19,7 @@ function decrementInterval() {
 	timeout = timeout-1;
 	$("#time").html("<span id='time'>" + timeout + "</span>");
 	$.post('/checkStatus', {
-			"id": localStorage.get("currentUser")
+		"id": localStorage.getItem("currentUser")
 		},evaluate);
 }
 
