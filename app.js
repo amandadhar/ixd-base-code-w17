@@ -68,17 +68,20 @@ app.post('/settings', settings.update);
 app.get('/help', help.view);
 app.get('/history', history.view);
 
-//Additional routes
+//Breadcrumb routes
 app.get('/vehicle', vehicle.view);
+app.get('/confirmation', confirmation.view);
+app.get('/equipment', equipment.view);
 
+//login routes
 app.get('/', login.view);
 app.post('/', login.login);
 app.get('/register', login.register);
 app.post('/register', login.createUser);
 
-app.get('/confirmation', confirmation.view);
-app.get('/equipment', equipment.view);
 
+
+//Sending and Accepting Request Routes
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
 app.post('/movenow-rider', nowRide.accept);
