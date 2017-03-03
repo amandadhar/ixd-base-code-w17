@@ -68,10 +68,14 @@ app.post('/settings', settings.update);
 app.get('/help', help.view);
 app.get('/history', history.view);
 
+
 //Breadcrumb routes
 app.get('/vehicle', vehicle.view);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
+//design B
+app.get('/homeb', index.viewB);
+app.get('/designb', index.designB);
 
 //login routes
 app.get('/', login.view);

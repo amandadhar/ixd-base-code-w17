@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>WeHaul Demo</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/customizations.css">
+</head>
+
+<body>
+
+<!--NAVBAR CODE-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
+            <ul class="dropdown-menu">
+                <li><a href="home">Home</a></li>
+                <li><a href="settings">Account Settings</a></li>
+                <li><a href="help">Help &amp; FAQ</a></li>
+                <li><a href="history">History</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </div>
+        <div class="nav navbar-nav" style = "position: relative;">
+            <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
+            <h1 style="font-size: 25px; top: -45px; color: #66a182;">Request Ride</h1>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid background">
+        <div class="row">
+            <div class="col-xs-6 opt">
+                <h2 class="titular">Select Vehicle</h2>
+                <form>
+                    <br><br>
+                    <input type="radio" name="Vehicle"> Truck
+                    <br><br><br>
+                    <input type="radio" name="Vehicle"> Van
+                    <br><br><br>
+                    <input type="radio" name="Vehicle"> Flatbed
+                    <br><br><br>
+                    <input type="radio" name="Vehicle"> Semi
+                    <br><br>
+                </form>
+            </div>
+            <div class="col-xs-6 opt">
+                <h2 class="titular">Extra Equipment</h2>
+                <form>
+                    0 <input type="radio" name="bigBox" value="0">
+                    1 <input type="radio" name="bigBox" value="1">
+                    2 <input type="radio" name="bigBox" value="2">
+                    3 <input type="radio" name="bigBox" value="3"> Large Box
+                    <br><br><br>
+                    0 <input type="radio" name="smallBox" value="0">
+                    1 <input type="radio" name="smallBox" value="1">
+                    2 <input type="radio" name="smallBox" value="2">
+                    3 <input type="radio" name="smallBox" value="3"> Small Box
+                    <br><br><br>
+                    0 <input type="radio" name="tape" value="0">
+                    1 <input type="radio" name="tape" value="1">
+                    2 <input type="radio" name="tape" value="2">
+                    3 <input type="radio" name="tape" value="3"> Tape
+                    <br><br><br>
+                    0 <input type="radio" name="twine" value="0">
+                    1 <input type="radio" name="twine" value="1">
+                    2 <input type="radio" name="twine" value="2">
+                    3 <input type="radio" name="twine" value="3"> Twine
+                    <br><br><br>
+                    0 <input type="radio" name="bubbleWrap" value="0">
+                    1 <input type="radio" name="bubbleWrap" value="1">
+                    2 <input type="radio" name="bubbleWrap" value="2">
+                    3 <input type="radio" name="bubbleWrap" value="3"> Bubble Wrap
+                    <br><br><br>
+                    0 <input type="radio" name="tarp" value="0">
+                    1 <input type="radio" name="tarp" value="1">
+                    2 <input type="radio" name="tarp" value="2">
+                    3 <input type="radio" name="tarp" value="3"> Tarp
+                </form>
+            </div>
+        </div>
+        <div class="row top-buff">
+            <div class="col-xs-12 opt">
+                <span id="name" style="visibility: hidden">{{name}}</span>
+                <form id="addRideForm" role="form">
+                    <h3 style = "color: #66a182;">Request a Ride</h3>
+                    <div class="form-group">
+                        <label for="location" style = "color: #09a129;">Location:</label>
+                        <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination" style = "color: #09a129;">Destination:</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Destination" name="destination">
+                    </div>
+                    <input type="submit" id="submitBtn" class="btn btn-default" style = "color: #66a182"; value="Request Ride"></input>
+                </form>
+            </div>
+        </div>
+
+
+
+
+</div> <!-- /container -->
+</body>
+
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/newRide.js"></script>
+</html>
