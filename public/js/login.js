@@ -40,7 +40,11 @@ function loggedIn(data) {
             localStorage.removeItem("email");
         }
         localStorage.setItem("currentUser", data);
-        window.location.href = "home";
+        if($("#designB").is(":checked")) {
+            window.location.href = "homeb";
+        } else {
+            window.location.href = "home";
+        }
     }
 }
 
