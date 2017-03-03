@@ -32,7 +32,7 @@ function moveNow(e) {
     e.preventDefault();
 
     if(rider === true) {
-        window.location.href = "movenow-rider";
+        window.location.href = "vehicle";
     } else if(rider === false) {
         window.location.href = "movenow-driver";
     }

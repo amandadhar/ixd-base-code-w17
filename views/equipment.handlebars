@@ -17,7 +17,7 @@
         <div class="navbar-header">
             <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
             <ul class="dropdown-menu">
-                <li><a href="/">Home</a></li>
+                <li><a href="home">Home</a></li>
                 <li><a href="settings">Account Settings</a></li>
                 <li><a href="help">Help &amp; FAQ</a></li>
                 <li><a href="history">History</a></li>
@@ -35,12 +35,11 @@
 <div class="background">
 
     <ul class="breadcrumb">
-        <li><a href="home">Rider/Mover</a></li>
-        <li><a href="movenow-rider">Request a Ride</a></li>
-        <li><a href="vehicle">Select Vehicle</a></li>
-        <li>Request Extra Equipment</li>
-        <li>Request Mover</li>
-        <li>Confirmation</li>
+        <li>Rider/Driver</li>
+
+        <li>Select Vehicle</li>
+        <li><b>Request Extra Equipment</b></li>
+        <li>Request Ride</li>
     </ul>
     <div class="row top-buff">
         <div class="left-align text" style= "color: #66a182; margin: 25px;">
@@ -48,41 +47,44 @@
         </div>
         </div>
 
-<div class ="container" style = "top: 20px; left: 20px"> 
+    <div class ="container" style = "top: 20px; left: 20px">
 
-<form action="/request">
-    0 <input type="radio" name="bigBox" value="0">
-    1 <input type="radio" name="bigBox" value="1">
-    2 <input type="radio" name="bigBox" value="2">
-    3 <input type="radio" name="bigBox" value="3"> Big box
-    <br>
-    0 <input type="radio" name="smallBox" value="0">
-    1 <input type="radio" name="smallBox" value="1">
-    2 <input type="radio" name="smallBox" value="2">
-    3 <input type="radio" name="smallBox" value="3"> Small box
-    <br>
-    0 <input type="radio" name="tape" value="0">
-    1 <input type="radio" name="tape" value="1">
-    2 <input type="radio" name="tape" value="2">
-    3 <input type="radio" name="tape" value="3"> Tape
-    <br>
-    0 <input type="radio" name="twine" value="0">
-    1 <input type="radio" name="twine" value="1">
-    2 <input type="radio" name="twine" value="2">
-    3 <input type="radio" name="twine" value="3"> Twine
-    <br>
-    0 <input type="radio" name="bubbleWrap" value="0">
-    1 <input type="radio" name="bubbleWrap" value="1">
-    2 <input type="radio" name="bubbleWrap" value="2">
-    3 <input type="radio" name="bubbleWrap" value="3"> Bubble wrap
-    <br>
-    0 <input type="radio" name="tarp" value="0">
-    1 <input type="radio" name="tarp" value="1">
-    2 <input type="radio" name="tarp" value="2">
-    3 <input type="radio" name="tarp" value="3"> Tarp
-<br><br>
-<input type="submit" style="color: #66a182; position: relative; left: 90px; ">
-</form>
+    <form action="/request">
+        0 <input type="radio" name="bigBox" value="0">
+        1 <input type="radio" name="bigBox" value="1">
+        2 <input type="radio" name="bigBox" value="2">
+        3 <input type="radio" name="bigBox" value="3"> Big box
+        <br>
+        0 <input type="radio" name="smallBox" value="0">
+        1 <input type="radio" name="smallBox" value="1">
+        2 <input type="radio" name="smallBox" value="2">
+        3 <input type="radio" name="smallBox" value="3"> Small box
+        <br>
+        0 <input type="radio" name="tape" value="0">
+        1 <input type="radio" name="tape" value="1">
+        2 <input type="radio" name="tape" value="2">
+        3 <input type="radio" name="tape" value="3"> Tape
+        <br>
+        0 <input type="radio" name="twine" value="0">
+        1 <input type="radio" name="twine" value="1">
+        2 <input type="radio" name="twine" value="2">
+        3 <input type="radio" name="twine" value="3"> Twine
+        <br>
+        0 <input type="radio" name="bubbleWrap" value="0">
+        1 <input type="radio" name="bubbleWrap" value="1">
+        2 <input type="radio" name="bubbleWrap" value="2">
+        3 <input type="radio" name="bubbleWrap" value="3"> Bubble wrap
+        <br>
+        0 <input type="radio" name="tarp" value="0">
+        1 <input type="radio" name="tarp" value="1">
+        2 <input type="radio" name="tarp" value="2">
+        3 <input type="radio" name="tarp" value="3"> Tarp
+    <br><br>
+        <a class="btn btn-danger" href="vehicle" style="float: left; width: 25%;">Back</a>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+        <a class="btn btn-success" href="movenow-rider" style="float: right; width: 25%;">Next</a>
+    </form>
+    </div>
 </div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
