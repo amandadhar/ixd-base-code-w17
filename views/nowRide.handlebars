@@ -17,7 +17,7 @@
             <div class="navbar-header">
                 <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
                 <ul class="dropdown-menu">
-                    <li><a href="home">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="settings">Account Settings</a></li>
                     <li><a href="help">Help &amp; FAQ</a></li>
                     <li><a href="history">History</a></li>
@@ -34,12 +34,12 @@
     <div class="background">
 
     <ul class="breadcrumb">
-        <li><a href="home">Rider/Driver</a></li>
+        <li><a href="/">Rider/Driver</a></li>
         <li>Request a Ride</li>
         <li><a href="vehicle">Select Vehicle</a></li>
-        <li>Request Extra Equipment</li>
-        <li>Request Mover</li>
-        <li>Confirmation</li>
+        <li><a href="equipment">Request Extra Equipment</a></li>
+        <li><a href="request">Request Mover</a></li>
+        <li><a href="confirmation">Confirmation</a></li>
     </ul>
 
     <div class="container">
@@ -50,10 +50,14 @@
             </button>
             <strong>Success!</strong> Ride Requested.
         </div>-->
-        <span id="name" style="visibility: hidden">{{name}}</span>
+
 
         <form id="addRideForm" role="form">
             <h3 style = "color: #66a182;">Request a Ride</h3>
+            <div class="form-group">
+                <label for="name" style = "color: #09a129;">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            </div>
             <div class="form-group">
                 <label for="location" style = "color: #09a129;">Location:</label>
                 <input type="text" class="form-control" id="location" placeholder="Location" name="location">
