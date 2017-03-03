@@ -34,6 +34,12 @@ var local_database_uri  = 'mongodb://localhost/' + local_database_name;
 var database_uri = process.env.MONGOLAB_URI || local_database_uri;
 mongoose.connect(database_uri);
 
+/*Heroku connection
+ var database_name = 'heroku_wnklw0fh';
+ var database_uri = 'mongodb://WeHaul:wehaulpass@ds113000.mlab.com:13000/' + database_name;
+ mongoose.connect(database_uri);
+ */
+
 
 var app = express();
 
