@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wehaul-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to We-Haul</title>
+    <!--<link href="./favicon.ico" rel="icon">-->
+
+    <!--Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/additions.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" ng-controller="NavController">
+            <div class="navbar-header">
+                <a class = "navbar-brand" href="#" ng-click="toggleNav()">{{toggleText}}</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!--Views go here-->
+    <div ui-view></div>
+    <!--Scripts-->
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animate.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-ui-router.js"></script>
+    <script src="js/wehaul-app.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
