@@ -29,3 +29,16 @@
     margin: 10px 10px 10px 10px;
     float: left;
 }
+
+.titular {
+    border: 2px solid green;
+}
+
+.opt {
+    border: 2px solid #CAFFB9;
+    background-color: #C0D461;
+}
+
+.background {
+    background-color: #0A2E36;
+}

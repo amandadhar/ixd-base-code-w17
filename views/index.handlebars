@@ -2,7 +2,7 @@
 <head>
     <title>WeHaul Demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -44,26 +44,26 @@
 
     <div class="container">
         <div class="row top-buff">
-            <div class="col-md-5" style="text-align: right;">
+            <div class="col-xs-5" style="text-align: right;">
                 <h3 style= "color: #66a182;">Rider</h3>
             </div>
-            <div class="col-md-2" style="text-align: center;">
+            <div class="col-xs-2" style="text-align: center;">
                 <label class="switch">
                     <input type="checkbox" id="slider">
                     <div class="slider round"></div>
                 </label>
             </div>
-            <div class="col-md-5" style="text-align: left;">
+            <div class="col-xs-5" style="text-align: left;">
                 <h3 style= "color: #66a182;">Driver</h3>
             </div>
         </div>
 
         <div class="row top-buff" style="text-align: center;">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-                <a href="" class="btn btn-primary jumbo-btn" id="moveNow"> <b>View Ride Requests</b></a>
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <a href="" class="btn btn-primary jumbo-btn" id="moveNow"> <b>Make A Ride Request</b></a>
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-xs-3"></div>
         </div>
 
     </div>
@@ -72,5 +72,10 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        if(localStorage.getItem("currentUser") == null) {
+            window.location.href = "/"
+        }
+    </script>
 </body>
 </html>
