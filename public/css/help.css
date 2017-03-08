@@ -56,23 +56,23 @@ On smaller screens, where height is less than 450px, change the style of the sid
     background-color: #C0D461;
     line-height: 1.5;
     text-align: center;
-    }
+}
 
-    #help{
+#help{
     float: left;
-    }
+}
 
-    #help1{
+#help1{
      display: inline-block;
-    }
+}
 
-    #help2{
-        float:left;
-    }
+#help2{
+    float:left;
+}
 
-    #help3{ 
+#help3{ 
     display: inline-block;   
-    }
+}
 
 .background{
     background-color: #0A2E36;
