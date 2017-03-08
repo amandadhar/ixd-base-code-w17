@@ -1,4 +1,7 @@
 /**
+ * Created by Liam on 3/7/2017.
+ */
+/**
  * Created by Liam on 2/22/2017.
  */
 'use strict';
@@ -35,6 +38,6 @@ function madeUser(data) {
         newDoc.write(data);
         newDoc.close();
     } else {
-        window.location.href = "home";
+        window.location.href = "homeB";
     }
 }

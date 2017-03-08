@@ -37,6 +37,6 @@ function moveNow(e) {
     if(rider === true) {
         window.location.href = "designB";
     } else if(rider === false) {
-        window.location.href = "movenow-driver";
+        window.location.href = "nowDriveB";
     }
 }

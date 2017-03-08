@@ -11,7 +11,7 @@ exports.view = function(req, res) {
     function displayRides(err, rides) {
         if(err) { console.log(err); res.send(500); }
         //console.log(rides);
-        res.render('nowDrive', { 'rides': rides });
+        res.render('A/nowDrive', { 'rides': rides });
     }
 
 };
@@ -35,5 +35,5 @@ exports.addRide = function(req, res) {
 };
 
 exports.pickup = function(req, res) {
-    res.render('nowDriveAccepted', picked);
+    res.render('A/nowDriveAccepted', picked);
 };

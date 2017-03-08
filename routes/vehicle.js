@@ -2,5 +2,5 @@
  * Created by Liam on 2/9/2017.
  */
 exports.view = function(req, res){
-    res.render('vehicle');
+    res.render('A/vehicle');
 };

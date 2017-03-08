@@ -1,11 +1,11 @@
 var models = require("../models");
 // Login screen
 exports.view = function(req, res){
-    res.render('login', { "status": "warningHidden" });
+    res.render('A/login', { "status": "warningHidden" });
 };
 
 exports.register = function(req, res) {
-    res.render('register', { "status": "warningHidden" });
+    res.render('A/register', { "status": "warningHidden" });
 };
 
 exports.createUser = function(req, res) {
@@ -21,7 +21,7 @@ exports.createUser = function(req, res) {
         console.log(users);
         console.log(users.length);
         if(users.length != 0) {
-            res.render('register', { "status": "warningShow" });
+            res.render('A/register', { "status": "warningShow" });
         } else {
             var newUser = new models.user({
                 "name": info.name,

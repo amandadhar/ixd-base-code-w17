@@ -15,5 +15,5 @@ exports.view = function(req, res){
         userInfo.history = hist;
     }
     console.log(userInfo.history);*/
-    res.render('history');
+    res.render('A/history');
 };

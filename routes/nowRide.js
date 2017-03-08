@@ -5,17 +5,17 @@ var models = require("../models");
 var pickup = require("../accepted.json");
 
 exports.view = function(req, res) {
-    res.render('nowRide');
+    res.render('A/nowRide');
 };
 
 exports.next = function(req, res) {
     var info = req.body;
     console.log(info);
-    res.render('nowRide', info);
+    res.render('A/nowRide', info);
 };
 
 exports.submitted = function(req, res) {
-    res.render('nowRideWaiting');
+    res.render('A/nowRideWaiting');
 };
 
 exports.accept = function(req, res) {
@@ -39,7 +39,7 @@ exports.accept = function(req, res) {
 
 exports.check = function(req, res) {
     var rideId = req.body.rideId;
-    var userId = req.body.userId
+    var userId = req.body.userId;
     //find the ride being accepted using rideRequest ID
     models.rideRequest
         .find({_id: rideId})
@@ -64,6 +64,8 @@ exports.check = function(req, res) {
                         }
                     }
                 }
+            } else {
+                res.send("none");
             }
         } else {
             res.send("none");
@@ -72,7 +74,7 @@ exports.check = function(req, res) {
 };
 
 exports.accepted = function(req, res) {
-  res.render("nowRideAccepted");
+  res.render("A/nowRideAccepted");
 };
 
 exports.getInfo = function(req, res) {
