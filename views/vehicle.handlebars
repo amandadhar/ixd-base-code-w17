@@ -49,32 +49,31 @@
         </div>
 
     <div class ="container" style = "top: 20px; left: 20px">
-        <form>
+        <form method="post" action="/equipment">
             <br><br>
-            <input type="radio" name="Vehicle"> Truck
+            <input type="radio" name="Vehicle" value="Truck"> Truck
             <br><br><br>
-            <input type="radio" name="Vehicle"> Van
+            <input type="radio" name="Vehicle" value="Van"> Van
             <br><br><br>
-            <input type="radio" name="Vehicle"> Flatbed
+            <input type="radio" name="Vehicle" value="Flatbed"> Flatbed
             <br><br><br>
-            <input type="radio" name="Vehicle"> Semi
+            <input type="radio" name="Vehicle" value="Semi"> Semi
             <br><br>
+            <div class="row top-buff"style="text-align: center;">
+                <div class="col-xs-12">
+                    <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
+                </div>
+            </div>
         </form>
     </div>
 
-            <div class="row top-buff"style="text-align: center;">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <a class="btn btn-success" href="equipment" style="float: right; width: 25%;">Next</a>
-                </div>
-                <div class="col-lg-4"></div>
-            </div>
+
         </div>
-     </div>   
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+    <script src="js/options.js"></script>
     <script>
         if(localStorage.getItem("currentUser") == null) {
             window.location.href = "/"

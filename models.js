@@ -7,10 +7,17 @@ var rideRequestSchema = new Mongoose.Schema({
     "name": String,
     "start": String,
     "end": String,
-    //"distance": Number,
-    //"pic": String,
     "resolved": Boolean,
-    "date": String
+    "date": String,
+    "options": {
+        "bigBox": String,
+        "smallBox": String,
+        "tape": String,
+        "twine": String,
+        "bubblewrap": String,
+        "tarp": String,
+        "vehicle": String
+    }
 });
 
 var userSchema = new Mongoose.Schema({

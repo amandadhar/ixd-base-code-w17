@@ -15,7 +15,7 @@ function acceptRide(e) {
     var rideID = $(this).attr('id');
     rideID = rideID.substr('accept'.length);
     console.log(rideID);
-    $.post('/movenow-rider',
+    $.post('/movenow-rider-accepted',
         {
             "id": rideID
         }, acceptedRide);

@@ -5,7 +5,7 @@ var models = require("../models");
 var userInfo = require("../userInfo.json");
 
 exports.view = function(req, res){
-    models.rideRequest
+    /*models.rideRequest
         .find({_id: userInfo.currentUser})
         .exec(updateStatus);
     function updateStatus(err, users) {
@@ -15,6 +15,6 @@ exports.view = function(req, res){
         }
         userInfo.history = hist;
     }
-    console.log(userInfo.history);
-    res.render('history', userInfo);
+    console.log(userInfo.history);*/
+    res.render('history');
 };

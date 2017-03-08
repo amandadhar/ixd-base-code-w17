@@ -77,8 +77,10 @@ app.get('/history', history.view);
 
 //Breadcrumb routes
 app.get('/vehicle', vehicle.view);
+//app.post('/vehicle', vehicle.next);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
+app.post('/equipment', equipment.next);
 //design B
 app.get('/homeb', index.viewB);
 app.get('/designb', index.designB);
@@ -94,8 +96,10 @@ app.post('/register', login.createUser);
 //Sending and Accepting Request Routes
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
-app.post('/movenow-rider', nowRide.accept);
+app.post('/movenow-rider', nowRide.next);
+app.post('/movenow-query', nowRide.getInfo);
 app.get('/movenow-rider-accepted', nowRide.accepted);
+app.post('/movenow-rider-accepted', nowRide.accept);
 app.get('/movenow-driver', nowDrive.view);
 app.post('/movenow-driver', nowDrive.addRide);
 app.get('/movenow-driver-accepted', nowDrive.pickup);

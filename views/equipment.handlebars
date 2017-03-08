@@ -44,45 +44,47 @@
     <div class="row top-buff">
         <div class="left-align text" style= "color: #66a182; margin: 25px;">
             <h1>Select extra equipment</h1>
+            <h2>{{Vehicle}}</h2>
         </div>
         </div>
 
     <div class ="container" style = "top: 20px; left: 20px">
 
-    <form action="/request">
-        0 <input type="radio" name="bigBox" value="0">
+    <form method="post" action="/movenow-rider">
+        0 <input type="radio" name="bigBox" value="0" checked>
         1 <input type="radio" name="bigBox" value="1">
         2 <input type="radio" name="bigBox" value="2">
         3 <input type="radio" name="bigBox" value="3"> Big box
         <br>
-        0 <input type="radio" name="smallBox" value="0">
+        0 <input type="radio" name="smallBox" value="0" checked>
         1 <input type="radio" name="smallBox" value="1">
         2 <input type="radio" name="smallBox" value="2">
         3 <input type="radio" name="smallBox" value="3"> Small box
         <br>
-        0 <input type="radio" name="tape" value="0">
+        0 <input type="radio" name="tape" value="0" checked>
         1 <input type="radio" name="tape" value="1">
         2 <input type="radio" name="tape" value="2">
         3 <input type="radio" name="tape" value="3"> Tape
         <br>
-        0 <input type="radio" name="twine" value="0">
+        0 <input type="radio" name="twine" value="0" checked>
         1 <input type="radio" name="twine" value="1">
         2 <input type="radio" name="twine" value="2">
         3 <input type="radio" name="twine" value="3"> Twine
         <br>
-        0 <input type="radio" name="bubbleWrap" value="0">
+        0 <input type="radio" name="bubbleWrap" value="0" checked>
         1 <input type="radio" name="bubbleWrap" value="1">
         2 <input type="radio" name="bubbleWrap" value="2">
         3 <input type="radio" name="bubbleWrap" value="3"> Bubble wrap
         <br>
-        0 <input type="radio" name="tarp" value="0">
+        0 <input type="radio" name="tarp" value="0" checked>
         1 <input type="radio" name="tarp" value="1">
         2 <input type="radio" name="tarp" value="2">
         3 <input type="radio" name="tarp" value="3"> Tarp
-    <br><br>
+        <input type="text" name="vehicle" value="{{Vehicle}}" style="visibility: hidden;">
+        <br><br>
         <a class="btn btn-danger" href="vehicle" style="float: left; width: 25%;">Back</a>
         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-        <a class="btn btn-success" href="movenow-rider" style="float: right; width: 25%;">Next</a>
+        <input type="submit" class="btn btn-success" style="float: right; width: 25%;" value="Next">
     </form>
     </div>
 </div>

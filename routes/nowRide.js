@@ -1,12 +1,17 @@
 /**
  * Created by Liam on 2/16/2017.
  */
-var userInfo = require('../userInfo.json');
 var models = require("../models");
 var pickup = require("../accepted.json");
 
 exports.view = function(req, res) {
-    res.render('nowRide', userInfo);
+    res.render('nowRide');
+};
+
+exports.next = function(req, res) {
+    var info = req.body;
+    console.log(info);
+    res.render('nowRide', info);
 };
 
 exports.submitted = function(req, res) {
@@ -69,4 +74,18 @@ exports.check = function(req, res) {
 
 exports.accepted = function(req, res) {
   res.render("nowRideAccepted");
+};
+
+exports.getInfo = function(req, res) {
+    var info = req.body;
+    var userId = info._id;
+    models.user
+        .find({_id: userId})
+        .exec(returnName);
+    function returnName(err, found) {
+        if(err) { console.log(err); res.send(500); }
+        if(found[0] && found[0].name) {
+            res.send(found[0].name);
+        }
+    }
 };
