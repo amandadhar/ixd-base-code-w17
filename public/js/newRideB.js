@@ -3,9 +3,18 @@
  */
 'use strict';
 
+var name = "";
+
 $(document).ready(function() {
+    $.post("movenow-query", {
+        "_id": localStorage.getItem("currentUser")
+    }, renderName);
     initPage();
 });
+
+function renderName(data) {
+    name = data.name;
+}
 
 function initPage() {
     $("#submitBtn").click(addRide);
@@ -14,7 +23,6 @@ function initPage() {
 function addRide(e) {
     e.preventDefault();
 
-    var name = $("#name").text();
     var loc = $("#location").val();
     var dest = $("#destination").val();
     var bigBox = $("input:radio[name=bigBox]").val();
@@ -52,5 +60,6 @@ function addRide(e) {
 }
 
 function addedRide(data) {
+    localStorage.setItem("currentReq", data);
     window.location.href = "movenow-rider-submitted";
 }

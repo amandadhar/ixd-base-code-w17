@@ -62,5 +62,6 @@ function addRide(e) {
 }
 
 function addedRide(data) {
+    localStorage.setItem("currentReq", data);
     window.location.href = "movenow-rider-submitted";
 }

@@ -60,4 +60,13 @@ function ensureLogout() {
     if(localStorage.getItem("currentUser") != null) {
         localStorage.removeItem("currentUser");
     }
+    if(localStorage.getItem("currentReq") != null) {
+        $.post("movenow-delete", {
+            "id": localStorage.getItem("currentReq")
+        }, deletedServerside);
+    }
+}
+
+function deletedServerside(data) {
+    localStorage.removeItem("currentReq");
 }

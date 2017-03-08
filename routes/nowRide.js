@@ -38,29 +38,28 @@ exports.accept = function(req, res) {
 };
 
 exports.check = function(req, res) {
-    var request = userInfo.currentRequest;
+    var rideId = req.body.rideId;
+    var userId = req.body.userId
     //find the ride being accepted using rideRequest ID
     models.rideRequest
-        .find({_id: request})
+        .find({_id: rideId})
         .exec(evalStatus);
     function evalStatus(err, found) {
         if(err) { console.log(err); res.send(500); }
-        //if the rideRequest ID returns a real unresolved ride, find the associated User and add it to their history.
+        //if the rideRequest ID returns a real resolved ride, find the associated User and add it to their history.
         if(found && found.length != 0) {
             if(found[0].resolved == true) {
-                userInfo.history.push(found[0]);
-                userInfo.currentRequest = "";
-                found[0].remove();
                 models.user
-                    .find({_id: userInfo.currentUser})
+                    .find({_id: userId})
                     .exec(finish);
                 function finish(err, users) {
                     if(err) { console.log(err); res.send(500); }
                     if(users && users[0]) {
-                        users[0].history = userInfo.history;
+                        users[0].history.push(found[0]);
                         users[0].save(andExit);
                         function andExit(err) {
                             if(err) {console.log(err); res.send(500);}
+                            found[0].remove();
                             res.send("some");
                         }
                     }
@@ -87,5 +86,19 @@ exports.getInfo = function(req, res) {
         if(found[0]) {
             res.send(found[0]);
         }
+    }
+};
+
+exports.deleteRide = function(req, res) {
+    var rideId = req.body.id;
+    models.rideRequest
+        .find({_id: rideId})
+        .exec(deleteRide);
+    function deleteRide(err, found) {
+        if(err) { console.log(err); res.send(500); }
+        if(found[0]) {
+            found[0].remove();
+        }
+        res.end();
     }
 };

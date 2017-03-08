@@ -97,7 +97,6 @@ app.post('/register', login.createUser);
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
 app.post('/movenow-rider', nowRide.next);
-app.post('/movenow-query', nowRide.getInfo);
 app.get('/movenow-rider-accepted', nowRide.accepted);
 app.post('/movenow-rider-accepted', nowRide.accept);
 app.get('/movenow-driver', nowDrive.view);
@@ -106,6 +105,8 @@ app.get('/movenow-driver-accepted', nowDrive.pickup);
 app.get('/movenow-rider-submitted', nowRide.submitted);
 
 app.post('/checkStatus', nowRide.check);
+app.post('/movenow-query', nowRide.getInfo);
+app.post('/movenow-delete', nowRide.deleteRide);
 
 
 http.createServer(app).listen(app.get('port'), function(){

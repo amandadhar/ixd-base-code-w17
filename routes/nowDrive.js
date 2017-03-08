@@ -3,7 +3,6 @@
  */
 var models = require("../models");
 var picked = require("../accepted.json");
-var userInfo = require("../userInfo.json");
 
 exports.view = function(req, res) {
     models.rideRequest
@@ -30,8 +29,7 @@ exports.addRide = function(req, res) {
     newRide.save(afterSave);
     function afterSave(err) {
         if(err) { console.log(err); res.send(500); }
-        userInfo.currentRequest = newRide._id;
-        res.end();
+        res.send(newRide._id);
     }
 };
 
