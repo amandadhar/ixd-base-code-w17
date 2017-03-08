@@ -9,12 +9,13 @@
 
  function initializePage() {
  	timeout = 30;
+ 	$("#cancel").click(cancelRequest);
  	var decrement = setInterval(decrementInterval, 1000);
  	var timer = setTimeout(back, 31000);
  }
 
  function back(){
- 	window.location.href = "/designB";
+ 	window.location.href = "designB";
  }
 
  function decrementInterval() {
@@ -33,4 +34,17 @@
      } else {
          window.location.href = "movenow-rider-accepted";
      }
+ }
+
+ function cancelRequest(e) {
+     e.preventDefault();
+
+     $.post('/movenow-delete', {
+         "id": localStorage.getItem("currentReq")
+     }, deleteRide);
+ }
+
+ function deleteRide(data) {
+     localStorage.removeItem("currentReq");
+     window.location.href = "designB";
  }
