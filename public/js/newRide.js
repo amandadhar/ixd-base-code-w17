@@ -42,14 +42,14 @@ function addRide(e) {
             "name": name,
             "start": loc,
             "end": dest,
+            "vehicle": vehicle,
             "options": {
                 "bigBox": bigBox,
                 "smallBox": smallBox,
                 "tape": tape,
                 "twine": twine,
                 "bubblewrap": wrap,
-                "tarp": tarp,
-                "vehicle": vehicle
+                "tarp": tarp
             }
         }, addedRide);
     } else {

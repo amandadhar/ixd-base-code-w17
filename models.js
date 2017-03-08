@@ -9,14 +9,14 @@ var rideRequestSchema = new Mongoose.Schema({
     "end": String,
     "resolved": Boolean,
     "date": String,
+    "vehicle": String,
     "options": {
         "bigBox": String,
         "smallBox": String,
         "tape": String,
         "twine": String,
         "bubblewrap": String,
-        "tarp": String,
-        "vehicle": String
+        "tarp": String
     }
 });
 

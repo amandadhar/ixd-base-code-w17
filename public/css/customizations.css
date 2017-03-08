@@ -42,3 +42,8 @@
 .background {
     background-color: #0A2E36;
 }
+
+.options {
+    border: 1px solid black;
+    padding: 1px;
+}
