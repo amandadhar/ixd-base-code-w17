@@ -1,3 +1,4 @@
+
 /*Bootstrap overrides*/
 .top-buff {
     margin-top: 20px;
@@ -55,4 +56,9 @@
 #title{
     font-size: 25px;
     color: #66a182;
+}
+
+#subtitle{
+    color: #66a182;
+    margin: 25px;
 }
