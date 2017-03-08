@@ -24,6 +24,7 @@ exports.addRide = function(req, res) {
         "end": info.end,
         "resolved": false,
         "date": new Date().toLocaleString(),
+        "vehicle": info.vehicle,
         "options": info.options
     });
     newRide.save(afterSave);
