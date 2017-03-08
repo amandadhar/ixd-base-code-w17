@@ -2,16 +2,21 @@ $(document).ready(function() {
 	initializePage();
 });
 
-/*
- * Function that is called when the document is ready.
- */
 function initializePage() {
-
+    $.post("movenow-query", {
+        "_id": localStorage.getItem("currentUser")
+    }, renderNameAndAddress);
 	$("#updateAdd").click(updateAddress);
 	$("#updateName").click(updateName);
 
 }
 
+function renderNameAndAddress(data) {
+	var username = data.name;
+	var userhome = data.home;
+	$("#name").html("<p>" + username + "</p>");
+	$("#address").html("<p>" + userhome + "</p>");
+}
 
 function updateName(e){
 	e.preventDefault();
@@ -54,11 +59,6 @@ function updateAddress(e){
 }
 //placeholder callbacks for POST requests
 function nameChanged(data) {
-	console.log("yo");
+	//console.log("yo");
 }
 function addressChanged(data) {}
-
-/*function back(){
-	window.history.back()
-}
-*/

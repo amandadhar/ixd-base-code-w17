@@ -81,11 +81,11 @@ exports.getInfo = function(req, res) {
     var userId = info._id;
     models.user
         .find({_id: userId})
-        .exec(returnName);
-    function returnName(err, found) {
+        .exec(returnInfo);
+    function returnInfo(err, found) {
         if(err) { console.log(err); res.send(500); }
-        if(found[0] && found[0].name) {
-            res.send(found[0].name);
+        if(found[0]) {
+            res.send(found[0]);
         }
     }
 };

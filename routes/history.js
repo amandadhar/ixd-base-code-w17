@@ -2,7 +2,6 @@
  * Created by Liam on 2/9/2017.
  */
 var models = require("../models");
-var userInfo = require("../userInfo.json");
 
 exports.view = function(req, res){
     /*models.rideRequest

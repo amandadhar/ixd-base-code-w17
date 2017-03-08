@@ -2,10 +2,9 @@
  * Created by Liam on 2/9/2017.
  */
 var models = require("../models");
-var userInfo = require("../userInfo.json");
 
 exports.view = function(req, res){
-    res.render('settings', userInfo);
+    res.render('settings');
 };
 
 exports.update = function(req, res) {
@@ -19,7 +18,7 @@ exports.update = function(req, res) {
         function saveName(err, users) {
             if(err) { console.log(err); res.send(500); }
             var user = users[0];
-            console.log(user);
+            //console.log(user);
             user.name = info.name;
             user.save(saveAndReturn);
             function saveAndReturn(err) {
