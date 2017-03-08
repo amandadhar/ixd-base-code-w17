@@ -1,5 +1,5 @@
 /**
- * Created by Liam on 2/23/2017.
+ * Created by Liam on 3/8/2017.
  */
 $(document).ready(function() {
     initPage();
@@ -22,5 +22,5 @@ function acceptRide(e) {
 }
 
 function acceptedRide(data) {
-    window.location.href = "movenow-driver-accepted";
+    window.location.href = "pickupB";
 }

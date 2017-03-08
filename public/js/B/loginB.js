@@ -1,4 +1,7 @@
 /**
+ * Created by Liam on 3/7/2017.
+ */
+/**
  * Created by Liam on 2/16/2017.
  */
 'use strict';
@@ -40,7 +43,7 @@ function loggedIn(data) {
             localStorage.removeItem("email");
         }
         localStorage.setItem("currentUser", data);
-        window.location.href = "home";
+        window.location.href = "homeB";
     }
 }
 

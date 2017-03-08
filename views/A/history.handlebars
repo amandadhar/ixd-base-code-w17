@@ -44,19 +44,14 @@
     margin: 10px;
     }
     </style>
-        {{#each history}}
 
-            <div class ="container entry" style = "text-align: left; left: 50px; top: 30px;">
-                <p>Date of Ride: {{date}}</p>
-                <p>From: {{start}} </p>
-                <p>To: {{end}}</p>
-            </div>
-        {{/each}}
+    <div id="histList">
     </div>
 </div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
+    <script src="js/history.js"></script>
     <script>
         if(localStorage.getItem("currentUser") == null) {
             window.location.href = "/"

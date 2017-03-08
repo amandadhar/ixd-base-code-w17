@@ -62,3 +62,8 @@
     color: #66a182;
     margin: 25px;
 }
+
+.options {
+    border: 1px solid black;
+    padding: 1px;
+}

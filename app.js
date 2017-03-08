@@ -27,17 +27,19 @@ var equipment = require('./routes/equipment');
 var request = require('./routes/request');
 var nowRide = require('./routes/nowRide');
 var nowDrive = require('./routes/nowDrive');
+//Design B route
+var desB = require('./routes/RenderB');
 
 //DB CONNECTION
-/*var local_database_name = 'WeHaul';
+var local_database_name = 'WeHaul';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name;
 var database_uri = process.env.MONGOLAB_URI || local_database_uri;
 mongoose.connect(database_uri);
-*/
+/*
 //Heroku connection
- var database_name = 'heroku_wnklw0fh';
- var database_uri = 'mongodb://WeHaul:wehaulpass@ds113000.mlab.com:13000/' + database_name;
- mongoose.connect(database_uri);
+ var database_name = 'heroku_nk6m8tcs';
+ var database_uri = 'mongodb://WeHaul:password@ds123050.mlab.com:23050/' + database_name;
+ mongoose.connect(database_uri);*/
 
 
 var app = express();
@@ -76,11 +78,10 @@ app.get('/history', history.view);
 
 //Breadcrumb routes
 app.get('/vehicle', vehicle.view);
+//app.post('/vehicle', vehicle.next);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
-//design B
-app.get('/homeb', index.viewB);
-app.get('/designb', index.designB);
+app.post('/equipment', equipment.next);
 
 //login routes
 app.get('/', login.view);
@@ -93,15 +94,32 @@ app.post('/register', login.createUser);
 //Sending and Accepting Request Routes
 app.get('/request', request.view);
 app.get('/movenow-rider', nowRide.view);
-app.post('/movenow-rider', nowRide.accept);
+app.post('/movenow-rider', nowRide.next);
 app.get('/movenow-rider-accepted', nowRide.accepted);
+app.post('/movenow-rider-accepted', nowRide.accept);
 app.get('/movenow-driver', nowDrive.view);
 app.post('/movenow-driver', nowDrive.addRide);
 app.get('/movenow-driver-accepted', nowDrive.pickup);
 app.get('/movenow-rider-submitted', nowRide.submitted);
 
 app.post('/checkStatus', nowRide.check);
+app.post('/movenow-query', nowRide.getInfo);
+app.post('/movenow-delete', nowRide.deleteRide);
 
+
+//Design B gets and posts
+app.get('/B', desB.login);
+app.get('/registerB', desB.register);
+app.post('/registerB', desB.createUser);
+app.get('/homeB', desB.index);
+app.get('/designB', desB.request);
+app.get('/waitingB', desB.waiting);
+app.get('/nowDriveB', desB.drive);
+app.get('/pickupB', desB.pickup);
+
+app.get('/settingsB', desB.settings);
+app.get('/historyB', desB.history);
+app.get('/helpB', desB.help);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -3,7 +3,6 @@
  */
 var models = require("../models");
 var picked = require("../accepted.json");
-var userInfo = require("../userInfo.json");
 
 exports.view = function(req, res) {
     models.rideRequest
@@ -12,7 +11,7 @@ exports.view = function(req, res) {
     function displayRides(err, rides) {
         if(err) { console.log(err); res.send(500); }
         //console.log(rides);
-        res.render('nowDrive', { 'rides': rides });
+        res.render('A/nowDrive', { 'rides': rides });
     }
 
 };
@@ -23,19 +22,18 @@ exports.addRide = function(req, res) {
         "name": info.name,
         "start": info.start,
         "end": info.end,
-        //"distance": info.distance,
-        //"pic": info.pic,
         "resolved": false,
-        "date": new Date().toLocaleString()
+        "date": new Date().toLocaleString(),
+        "vehicle": info.vehicle,
+        "options": info.options
     });
     newRide.save(afterSave);
     function afterSave(err) {
         if(err) { console.log(err); res.send(500); }
-        userInfo.currentRequest = newRide._id;
-        res.end();
+        res.send(newRide._id);
     }
 };
 
 exports.pickup = function(req, res) {
-    res.render('nowDriveAccepted', picked);
+    res.render('A/nowDriveAccepted', picked);
 };

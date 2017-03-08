@@ -1,12 +1,11 @@
 var models = require("../models");
-var userInfo = require("../userInfo.json");
 // Login screen
 exports.view = function(req, res){
-    res.render('login', { "status": "warningHidden" });
+    res.render('A/login', { "status": "warningHidden" });
 };
 
 exports.register = function(req, res) {
-    res.render('register', { "status": "warningHidden" });
+    res.render('A/register', { "status": "warningHidden" });
 };
 
 exports.createUser = function(req, res) {
@@ -22,7 +21,7 @@ exports.createUser = function(req, res) {
         console.log(users);
         console.log(users.length);
         if(users.length != 0) {
-            res.render('register', { "status": "warningShow" });
+            res.render('A/register', { "status": "warningShow" });
         } else {
             var newUser = new models.user({
                 "name": info.name,
@@ -31,8 +30,6 @@ exports.createUser = function(req, res) {
                 "home": "None Set!",
                 "history": []
             });
-            userInfo.name = newUser.name;
-            userInfo.home = newUser.home;
             newUser.save(addNewUser);
         }
     }
@@ -54,10 +51,6 @@ exports.login = function(req, res) {
             if(users[0].password != info.password) {
                 res.send("bad");
             } else {
-                userInfo.name = users[0].name;
-                userInfo.history = users[0].history;
-                userInfo.home = users[0].home;
-                userInfo.currentUser = users[0]._id;
                 res.send(users[0]._id);
             }
         } else {

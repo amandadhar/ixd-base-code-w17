@@ -38,6 +38,16 @@
                 <p><b>Current Location:</b> {{start}}</p>
                 <p><b>Destination:</b> {{end}}</p>
                 <p><b>Requested:</b> {{date}}</p>
+                <div class="options">
+                    <h5>Details</h5>
+                    <p><b>Vehicle:</b> {{vehicle}}</p>
+                    <p><b>Large Boxes:</b> {{options.bigBox}}</p>
+                    <p><b>Small Boxes:</b> {{options.smallBox}}</p>
+                    <p><b>Tape:</b> {{options.tape}}</p>
+                    <p><b>Twine:</b> {{options.twine}}</p>
+                    <p><b>Bubble Wrap:</b> {{options.bubblewrap}}</p>
+                    <p><b>Tarps:</b> {{options.tarp}}</p>
+                </div>
                 <p><a class="btn btn-default acceptBtn" id="accept{{_id}}">Accept Request</a></p>
             </div>
         {{/each}}
