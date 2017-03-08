@@ -19,9 +19,9 @@ exports.submitted = function(req, res) {
 };
 
 exports.accept = function(req, res) {
-    var info = req.body;
+    var rideId = req.body.id;
     models.rideRequest
-        .find({_id: info.id})
+        .find({_id: rideId})
         .exec(updateStatus);
     function updateStatus(err, rides) {
         if(err) { console.log(err); res.send(500); }

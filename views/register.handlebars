@@ -25,16 +25,12 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
             <a class="btn btn-lg btn-primary btn-block" id="register">Create Account</a>
+            <a class="btn btn-lg btn-primary btn-block" href="/">Return to Login</a>
         </form>
     </div>
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/register.js"></script>
-    <script>
-        if(localStorage.getItem("currentUser") == null) {
-            window.location.href = "/"
-        }
-    </script>
 </body>
 </html>
