@@ -42,3 +42,17 @@
 .background {
     background-color: #0A2E36;
 }
+
+#logo{
+    width: 20%;
+}
+
+.navbar{
+    margin-bottom: 10px;
+    height: 57px;
+}
+
+#title{
+    font-size: 25px;
+    color: #66a182;
+}
