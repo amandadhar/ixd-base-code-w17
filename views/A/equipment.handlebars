@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--NAVBAR CODE-->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="margin-bottom: 1px;">
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
@@ -32,7 +32,6 @@
     </div>
 </nav>
 <!--NAVBAR END-->
-<div class="background">
 
     <ul class="breadcrumb">
         <li>Rider/Driver</li>
@@ -41,14 +40,12 @@
         <li><b>Request Extra Equipment</b></li>
         <li>Request Ride</li>
     </ul>
-    <div class="row top-buff">
-        <div class="left-align text" style= "color: #66a182; margin: 25px;">
-            <h1>Select extra equipment</h1>
-            <h2>{{Vehicle}}</h2>
+    <div class="row top-buff" style= "text-align: center; color: #66a182; margin: 18px;">
+            <h1>Do you need extra equipment?</h1>
         </div>
         </div>
 
-    <div class ="container" style = "top: 20px; left: 20px">
+<div class ="container">
 
     <form method="post" action="/movenow-rider">
         0 <input type="radio" name="bigBox" value="0" checked>

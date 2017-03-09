@@ -26,9 +26,9 @@
                     <li><a href="home">Logout</a></li>
                 </ul>
             </div>
-            <div class="nav navbar-nav" style = "position: relative;">
-                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
-                    <h1 style="font-size: 25px; top: -45px; color: #66a182;">Select Vehicle</h1>
+             <div class="nav navbar-nav" style = "position: relative;">
+                <img src="graphics/wehaul-logo.jpg" id = "logo" align="left">
+                    <h1 id="title">Select Vehicle</h1>
             </div>
         </div>
     </nav>
@@ -42,13 +42,11 @@
             <li>Request Extra Equipment</li>
             <li>Request Ride</li>
         </ul>
-        <div class="row top-buff">
-        <div class="left-align text" style= "color: #66a182; margin: 25px;">
+    <div class="row top-buff" id="subtitle">
+        <div class="left-align text">
             <h1>Select a Vehicle</h1>
         </div>
-        </div>
-
-    <div class ="container" style = "top: 20px; left: 20px">
+    <div class ="container">
         <form method="post" action="/equipment">
             <br><br>
             <input type="radio" name="Vehicle" value="Truck"> Truck
@@ -59,12 +57,14 @@
             <br><br><br>
             <input type="radio" name="Vehicle" value="Semi"> Semi
             <br><br>
-            <div class="row top-buff"style="text-align: center;">
-                <div class="col-xs-12">
-                    <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
-                    <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
-                </div>
+    </div>
+
+    <div class="row top-buff"style="text-align: center;">
+        <div class="col-lg-4">
+            <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
+        </div>
             </div>
         </form>
     </div>

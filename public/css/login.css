@@ -1,8 +1,23 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background-color: #0A2E36;
 }
+
+.container {
+  border: 3px solid #14cc60; 
+  position: relative;
+  width: 320px;
+  height: 360px;
+  background-color: #0A2E36;
+  color: #14cc60;
+}
+
+/*.logo {
+  width: 350px;
+  height: 220px;
+  position: absolute;
+}*/
 
 .form-signin {
   max-width: 330px;
