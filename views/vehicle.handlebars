@@ -13,7 +13,7 @@
 </head>
 <body>
     <!--NAVBAR CODE-->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 1px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
@@ -26,28 +26,25 @@
                     <li><a href="home">Logout</a></li>
                 </ul>
             </div>
-             <div class="nav navbar-nav" style = "position: relative;">
-                <img src="graphics/wehaul-logo.jpg" id = "logo" align="left">
-                    <h1 id="title">Select Vehicle</h1>
+            <div class="nav navbar-nav" style = "position: relative;">
+                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
+                    <h1 style="font-size: 25px; top: -45px; color: #66a182;">Select Vehicle</h1>
             </div>
         </div>
     </nav>
 
-    <div class="background">
+    <ul class="breadcrumb">
+        <li>Rider/Driver</li>
 
-        <ul class="breadcrumb">
-            <li>Rider/Driver</li>
-
-            <li><b>Select Vehicle</b></li>
-            <li>Request Extra Equipment</li>
-            <li>Request Ride</li>
-        </ul>
-    <div class="row top-buff" id="subtitle">
-        <div class="left-align text">
+        <li><b>Select Vehicle</b></li>
+        <li>Request Extra Equipment</li>
+        <li>Request Ride</li>
+    </ul>
+        <div class="row top-buff"style= "text-align: center; color: #66a182; margin: 15px;">
             <h1>Select a Vehicle</h1>
         </div>
-    </div>    
-    <div class ="container"> 
+    </div>
+    <div class ="container">
         <form>
             <br><br>
             <input type="radio" name="Vehicle"> Truck
@@ -61,15 +58,18 @@
         </form>
     </div>
 
-    <div>
-        <div class="row-lg-4"></div>
-        <div class="col-lg-3">
-            <a class="btn btn-danger" href="movenow-rider" style="float: left; width: 25%;">Back</a>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <a class="btn btn-success" href="equipment" style="float: right; width: 25%;">Next</a>
+            <div class="row top-buff"style="text-align: center;">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a class="btn btn-success" href="equipment" style="float: right; width: 25%;">Next</a>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
         </div>
-    </div>
-</div>     
+     </div>   
+</body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
     <script>

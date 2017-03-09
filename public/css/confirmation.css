@@ -1,15 +1,10 @@
-.bg-1 { 
-    background-color: #0A2E36;
-    position: relative;
-    width: 1200px; 
-    top: -10px; 
-    height: 800px;
+body {
+  padding-bottom: 40px;
+  background-color: #0A2E36;
 }
-
 
 .container {
 	border: 3px solid #CAFFB9;
-	margin: -10px;
 	position: relative; 
     width: 450px;
     height: 150px;

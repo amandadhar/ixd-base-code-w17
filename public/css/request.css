@@ -1,3 +1,8 @@
+body {
+  padding-bottom: 40px;
+  background-color: #0A2E36;
+}
+
 ul.breadcrumb {
     padding: 8px 16px;
     list-style: none;
@@ -11,17 +16,8 @@ ul.breadcrumb li+li:before {
 }
 ul.breadcrumb li a {color: green;}
 
-.background { 
-    background-color: #0A2E36;
-    position: relative;
-    width: 1200px; 
-    top: -10px; 
-    height: 800px;
-}
-
 .container {
 	border: 3px solid #CAFFB9;
-	margin: -10px;
 	position: relative; 
     width: 450px;
     height: 150px;
@@ -43,7 +39,5 @@ ul.breadcrumb li a {color: green;}
 
 .btn {
 	position: relative; 
-	left: 150px; 
-	top: 80px;
 	color: #66a182;
 }
