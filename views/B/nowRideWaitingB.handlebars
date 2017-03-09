@@ -39,13 +39,13 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-function trackCancel(){
+      function trackCancel(){
         var cancel = true;
-        _gaq.push(['trackCancel', cancel])
+        ga('send', 'event', 'onclick', cancel);
       }
       function trackGoogleAnalytics(){
-        var date = formatAMPM()
-        _gaq.push(['_trackEvent', date])
+        var date = formatAMPM();
+        ga('send', 'event', 'onLoad', 'endTime', date);
       }
 
   ga('create', 'UA-92514792-4', 'auto');

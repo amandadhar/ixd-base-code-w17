@@ -40,11 +40,11 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       function trackCancel(){
         var cancel = true;
-        ga(['trackCancel', cancel])
+        ga('send', 'event', 'onclick', cancel);
       }
       function trackGoogleAnalytics(){
-        var date = formatAMPM()
-        ga(['_trackEvent', date])
+        var date = formatAMPM();
+        ga('send', 'event', 'onLoad', 'endTime', date);
       }
       ga('create', 'UA-92514792-3', 'auto');
       ga('send', 'pageview');

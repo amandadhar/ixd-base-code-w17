@@ -79,10 +79,9 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
       function trackGoogleAnalytics(){
-        var date = formatAMPM()
-        _gaq.push(['_trackEvent', date])
-      }
-      
+        var date = formatAMPM();
+        ga('send', 'event', 'onLoad', 'startTime', date); 
+        }    
       ga('create', 'UA-92514792-3', 'auto');
       ga('send', 'pageview');
 </script>
