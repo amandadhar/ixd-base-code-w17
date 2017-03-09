@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-xs-4"></div>
             <div class="col-xs-4">
-                <a class="btn btn-lg btn-default btn-block" id="cancel">Cancel Request</a>
+                <a class="btn btn-lg btn-default btn-block" id="cancel" onClick="_gaq.push(['_trackEvent', 'RideCancel', 'Click', 'Cancel');">Cancel Request</a>
             </div>
             <div class="col-xs-4"></div>
         </div>
@@ -41,6 +41,7 @@
 
       ga('create', 'UA-92514792-3', 'auto');
       ga('send', 'pageview');
+      ga('send', 'event', 'onclick', 'cancel', 'Cancel Request');
 </script>
 </body>
 </html>

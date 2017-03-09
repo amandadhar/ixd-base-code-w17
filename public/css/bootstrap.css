@@ -307,7 +307,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #0A2E36;
 }
 
 input,
@@ -2349,7 +2349,7 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #428bca;
+  background-color: white;
   border-color: #357ebd;
 }
 

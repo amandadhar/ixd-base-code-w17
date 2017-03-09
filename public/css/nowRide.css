@@ -1,9 +1,6 @@
-.background { 
-    background-color: #0A2E36;
-    position: relative;
-    width: 1200px; 
-    top: -10px; 
-    height: 800px;
+body {
+  padding-bottom: 40px;
+  background-color: #0A2E36;
 }
 
 ul.breadcrumb {
@@ -18,3 +15,7 @@ ul.breadcrumb li+li:before {
     content: "/\00a0";
 }
 ul.breadcrumb li a {color: green;}
+
+.container {
+    margin-left: 20px;
+}

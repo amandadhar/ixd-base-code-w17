@@ -12,7 +12,7 @@
 </head>
 <body>
     <!--NAVBAR CODE-->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 1px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
@@ -33,13 +33,14 @@
 
     <div class="background">
 
-        <ul class="breadcrumb">
-            <li>Rider/Driver</li>
-
-            <li>Select Vehicle</li>
-            <li>Request Extra Equipment</li>
-            <li><b>Request Ride</b></li>
-        </ul>
+    <ul class="breadcrumb">
+        <li><a href="home">Rider/Driver</a></li>
+        <li>Request a Ride</li>
+        <li>Select Vehicle</a></li>
+        <li>Request Extra Equipment</li>
+        <li>Request Mover</li>
+        <li>Confirmation</li>
+    </ul>
 
     <div class="container">
         <span id="name" style="visibility: hidden">{{name}}</span>
@@ -74,14 +75,5 @@
             window.location.href = "/"
         }
     </script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-92514792-3', 'auto');
-      ga('send', 'pageview');
-</script>
 </body>
 </html>
