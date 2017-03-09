@@ -26,43 +26,43 @@
                 <li><a href="/">Logout</a></li>
             </ul>
         </div>
-        <div class="nav navbar-nav" style = "position: relative;">
-                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
-                    <h1 style="font-size: 25px; top: -45px; color: #66a182;">Account Settings</h1>
+        <div class="nav navbar-nav">
+                <img src="graphics/wehaul-logo.jpg" id = "logo" align="left">
+                    <h1 id="title">Account Settings</h1>
         </div>
     </div>
 </nav>
 <div class = "background">
-    <div style = "position:relative; left:40px; top:20px; color: #66a182">
+    <div class = "col-lg-4"id="text" style="float:left;">
         <h3>Name</h3>
     </div>
 
-    <div style = "position:relative; left:420px; top:-25px; color: #66a182">
+    <div class= "col-lg-4"id="text" style="float:right;">
         <h3>Address</h3>
     </div>
-
-    <div class ="container" id = "name" style ="text-align:center; position:relative; left:40px; top:-20px; font-size:250%;">
-
+    <div style="height:70px;">
     </div>
-
-    <div id="errname" style = "position: absolute; bottom: 520px; right: 490px; font-size:150%;">
+    <div class ="container" id = "name" style="float:left;">
+            <p>{{name}}</p>
     </div>
-
         &nbsp; &nbsp; &nbsp; &nbsp;
-
-    <div class= "container" id = "address" style ="text-align: center; position:relative; left:420px; top:-160px; font-size:250%;">
-
+    <div class= "container" id = "address" style ="float:right;">
+            <p>{{home}}</p>
     </div>
 
-    <div id="erraddress" style = "position: absolute; bottom: 520px; right: 120px; font-size:150%;">
-    </div>
-
-    <div style = "text-align: center; position: absolute; right:534px; bottom:560px; font-size:150%;">
+    <div class="col-lg-3">
         <button id="updateName"><a href="">Update name?</a></button>
     </div>
 
-    <div style = "text-align: center; position: absolute; right:150px; bottom:560px; font-size:150%;">
+    <div class="col-lg-8">
         <button id="updateAdd"><a href="">Update address?</a></button>
+    </div>
+    <div>
+    </div>
+    <div id="errname">
+    </div>
+
+    <div id="erraddress">
     </div>
 </div>
 
@@ -70,7 +70,7 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/settings.js"></script>
 <script>
-    if(localStorage.getItem("currentUser") == null) {
+    /*if(localStorage.getItem("currentUser") == null) {
         window.location.href = "/"
     }
 </script>
