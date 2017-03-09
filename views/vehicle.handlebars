@@ -46,47 +46,36 @@
         <div class="left-align text">
             <h1>Select a Vehicle</h1>
         </div>
-    <div class ="container">
-        <form method="post" action="/equipment">
+    </div>    
+    <div class ="container"> 
+        <form>
             <br><br>
-            <input type="radio" name="Vehicle" value="Truck"> Truck
+            <input type="radio" name="Vehicle"> Truck
             <br><br><br>
-            <input type="radio" name="Vehicle" value="Van"> Van
+            <input type="radio" name="Vehicle"> Van
             <br><br><br>
-            <input type="radio" name="Vehicle" value="Flatbed"> Flatbed
+            <input type="radio" name="Vehicle"> Flatbed
             <br><br><br>
-            <input type="radio" name="Vehicle" value="Semi"> Semi
+            <input type="radio" name="Vehicle"> Semi
             <br><br>
-    </div>
-
-    <div class="row top-buff"style="text-align: center;">
-        <div class="col-lg-4">
-            <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
-        </div>
-            </div>
         </form>
     </div>
 
-
+    <div>
+        <div class="row-lg-4"></div>
+        <div class="col-lg-3">
+            <a class="btn btn-danger" href="movenow-rider" style="float: left; width: 25%;">Back</a>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <a class="btn btn-success" href="equipment" style="float: right; width: 25%;">Next</a>
         </div>
+    </div>
+</div>     
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
-    <script src="js/options.js"></script>
     <script>
         if(localStorage.getItem("currentUser") == null) {
             window.location.href = "/"
         }
     </script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-92514792-3', 'auto');
-      ga('send', 'pageview');
-</script>
 </body>
 </html>
