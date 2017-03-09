@@ -9,3 +9,9 @@
 .entry {
     background-color: #66a182;
 }
+
+.container{
+	border: 1px solid;
+    width: 300px;
+    margin: 10px;
+}
