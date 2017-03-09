@@ -59,8 +59,11 @@
 }
 
 #subtitle{
+    /*
+    TODO: Check if the margin satifies all relevant screens
+    */
     color: #66a182;
-    margin: 25px;
+    margin: 10px;
 }
 
 .options {

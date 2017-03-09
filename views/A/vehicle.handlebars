@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/customizations.css">
     <link rel="stylesheet" href="css/vehicle.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
 </head>
 <body>
     <!--NAVBAR CODE-->
@@ -33,19 +32,18 @@
         </div>
     </nav>
 
-    <div class="background">
+<div class="background">
 
-        <ul class="breadcrumb">
-            <li>Rider/Driver</li>
-
-            <li><b>Select Vehicle</b></li>
-            <li>Request Extra Equipment</li>
-            <li>Request Ride</li>
-        </ul>
-    <div class="row top-buff" id="subtitle">
-        <div class="left-align text">
-            <h1>Select a Vehicle</h1>
-        </div>
+    <ul class="breadcrumb">
+        <li>Rider/Driver</li>
+        <li><b>Select Vehicle</b></li>
+        <li>Request Extra Equipment</li>
+        <li>Request Ride</li>
+        <li>Confirmation</li>
+    </ul>
+    <div class="left-align text"id="subtitle">
+        <h1>Select a Vehicle</h1>
+    </div>
     <div class ="container">
         <form method="post" action="/equipment">
             <br><br>
@@ -59,18 +57,16 @@
             <br><br>
     </div>
 
-    <div class="row top-buff"style="text-align: center;">
-        <div class="col-lg-4">
-            <a class="btn btn-danger" href="home" style="float: left; width: 25%;">Back</a>
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
-        </div>
+            <div class="row top-buff"style="text-align: center;">
+                <div class="col-lg-3">
+                    <a class="btn btn-danger"id="back"href="home" style="float: left; width: 25%;">Back</a>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input class="btn btn-success" type="submit" value="Next" style="float: right; width: 25%;" id="nextVehicle">
+                </div>
             </div>
         </form>
-    </div>
 
-
-        </div>
+</div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
     <script src="js/options.js"></script>
