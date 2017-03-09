@@ -5,8 +5,8 @@ body {
 
 .container {
 	border: 3px solid #CAFFB9;
-	position: relative; 
     width: 450px;
+    margin:10px;
     height: 150px;
     background-color: #C0D461;
     color: #2E4057;
