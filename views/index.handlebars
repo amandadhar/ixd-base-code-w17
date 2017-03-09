@@ -2,7 +2,7 @@
 <head>
     <title>WeHaul Demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -13,12 +13,12 @@
 </head>
 <body>
     <!--NAVBAR CODE-->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 1px;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
                 <ul class="dropdown-menu">
-                    <li><a href="home">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="settings">Account Settings</a></li>
                     <li><a href="help">Help &amp; FAQ</a></li>
                     <li><a href="history">History</a></li>
@@ -31,21 +31,19 @@
             </div>
         </div>
     </nav>
-  
-    <div class="background">
 
     <ul class="breadcrumb">
-        <li><b>Rider/Driver</b></li>
-
-        <li>Select Vehicle</li>
-        <li>Request Extra Equipment</li>
-        <li>Request Ride</li>
+        <li>Rider/Driver</li>
+        <li><a href="movenow-rider">Request a Ride</a></li>
+        <li><a href="vehicle">Select Vehicle</a></li>
+        <li><a href="equipment">Request Extra Equipment</a></li>
+        <li><a href="request">Request Mover</a></li>
+        <li><a href="confirmation">Confirmation</a></li>
     </ul>
 
-    <div class="container">
         <div class="row top-buff">
             <div class="col-md-5" style="text-align: right;">
-                <h3 style= "color: #66a182;">Rider</h3>
+                <h3 style= "color: #14cc60;">Rider</h3>
             </div>
             <div class="col-md-2" style="text-align: center;">
                 <label class="switch">
@@ -54,20 +52,19 @@
                 </label>
             </div>
             <div class="col-md-5" style="text-align: left;">
-                <h3 style= "color: #66a182;">Driver</h3>
+                <h3 style= "color: #14cc60;">Driver</h3>
             </div>
         </div>
 
         <div class="row top-buff" style="text-align: center;">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <a href="" class="btn btn-primary jumbo-btn" id="moveNow"> <b>View Ride Requests</b></a>
+                <a href="" class="btn btn-primary" id="moveNow"> <b>Make A Ride Request</b></a>
             </div>
             <div class="col-sm-3"></div>
         </div>
 
     </div>
-</div>
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>

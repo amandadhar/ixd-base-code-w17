@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
+    <link rel="stylesheet" href="css/nowDrive.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
     <!--NAVBAR CODE-->
@@ -23,22 +25,22 @@
                     <li><a href="/">Logout</a></li>
                 </ul>
             </div>
-            <div class="nav navbar-nav">
-                <h2>WEHAUL</h2>
+            <div class="nav navbar-nav" style = "position: relative;">
+                    <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <h1>Current Ride Requests</h1>
+    <div class="left-align text" style= "color: #14cc60; margin: 25px;">
+    <h1>Current Ride Requests</h1>
         {{#each rides}}
-            <div class="panel panel-default ride">
-                <img src="{{pic}}" class="detailsImage">
+            <div class="container">
+                <span class="glyphicon glyphicon-road detailsImage"></span>
                 <h4><b>{{name}}</b></h4>
                 <p><b>Current Location:</b> {{start}}</p>
                 <p><b>Destination:</b> {{end}}</p>
-                <p><b>Distance from You:</b> {{distance}} miles</p>
-                <p><a class="btn btn-default">Accept Request</a></p>
+                <p><b>Requested:</b> {{date}}</p>
+                <p><a class="btn btn-default acceptBtn" id="accept{{_id}}">Accept Request</a></p>
             </div>
         {{/each}}
     </div>
@@ -46,5 +48,6 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/acceptRide.js"></script>
 </body>
 </html>
