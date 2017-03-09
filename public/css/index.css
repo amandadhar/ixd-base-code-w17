@@ -15,3 +15,7 @@ ul.breadcrumb li+li:before {
     content: "/\00a0";
 }
 ul.breadcrumb li a {color: green;}
+
+#moveNow{
+	background-color:#357EBF;
+}
