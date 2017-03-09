@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-xs-4"></div>
         <div class="col-xs-4">
-           <a class="btn btn-lg btn-default btn-block" id="cancel" onClick="_gaq.push(['_trackEvent', 'RideCancel', 'Click', 'Cancel');">Cancel Request</a>
+           <a class="btn btn-lg btn-default btn-block" id="cancel" onClick="trackCancel">Cancel Request</a>
         </div>
         <div class="col-xs-4"></div>
     </div>
@@ -39,8 +39,18 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      function trackCancel(){
+        var cancel = true;
+        ga('send', 'event', 'onclick', cancel);
+      }
+      function trackGoogleAnalytics(){
+        var date = formatAMPM();
+        ga('send', 'event', 'onLoad', 'endTime', date);
+      }
+
   ga('create', 'UA-92514792-4', 'auto');
   ga('send', 'pageview');
+  ga('send')
 
 </script>
 </body>
