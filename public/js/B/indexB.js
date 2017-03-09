@@ -40,3 +40,4 @@ function moveNow(e) {
         window.location.href = "nowDriveB";
     }
 }
+

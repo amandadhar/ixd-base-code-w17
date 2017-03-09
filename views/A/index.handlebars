@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
-<body>
-    <!--NAVBAR CODE-->
+<body onpageshow="trackGoogleAnalytics">    <!--NAVBAR CODE-->
     <nav class="navbar navbar-default" style="margin-bottom: 1px;">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -78,7 +77,12 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
+      
+      function trackGoogleAnalytics(){
+        var date = formatAMPM()
+        _gaq.push(['_trackEvent', date])
+      }
+      
       ga('create', 'UA-92514792-3', 'auto');
       ga('send', 'pageview');
 </script>
