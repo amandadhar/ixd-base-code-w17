@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
+    <div class="alert alert-danger {{status}}">
+        <strong>Email already taken.</strong> Please register with a different email address.
+    </div>
     <div class="container">
 
         <form class="form-signin">
-            <div class="alert alert-danger {{status}}">
-                <strong>Email already taken.</strong> Please register with a different email address.
-            </div>
             <h2 class="form-signin-heading">New Account</h2>
             <label for="inputName" class="sr-only">Name</label>
             <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
