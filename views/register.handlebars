@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/customizations.css">
     <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-
-        <form class="form-signin">
-            <div class="alert alert-danger {{status}}">
+    
+    <div class="alert alert-danger {{status}}">
                 <strong>Email already taken.</strong> Please register with a different email address.
-            </div>
+    </div>
+
+    <p style="text-align:center;">
+        <img src="graphics/wehaul-logo-transp-white.png" class="logo" style="max-width: 70%; max-height:70%;">
+    </p>
+
+    <div class="container">
+        <form class="form-signin">
             <h2 class="form-signin-heading">New Account</h2>
             <label for="inputName" class="sr-only">Name</label>
             <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
@@ -24,7 +30,7 @@
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-            <a class="btn btn-lg btn-primary btn-block" id="register">Create Account</a>
+            <a class="btn btn-lg btn-primary btn-block" id="register" style = "color: #66a182";>Create Account</a>
         </form>
     </div>
 
