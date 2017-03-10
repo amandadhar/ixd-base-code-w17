@@ -31,13 +31,14 @@ exports.createUser = function(req, res) {
                 "history": []
             });
             newUser.save(addNewUser);
+            function addNewUser(err) {
+                if(err) { console.log(err); res.send(500); }
+                res.send(newUser);
+            }
         }
     }
 
-    function addNewUser(err) {
-        if(err) { console.log(err); res.send(500); }
-        res.end();
-    }
+
 };
 
 exports.login = function(req, res) {
