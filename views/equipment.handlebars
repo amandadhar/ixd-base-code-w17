@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>WeHaul Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/customizations.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+<!--NAVBAR CODE-->
+<nav class="navbar navbar-default" style="margin-bottom: 1px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" id="omni">☰</a>
+            <ul class="dropdown-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="settings">Account Settings</a></li>
+                <li><a href="help">Help &amp; FAQ</a></li>
+                <li><a href="history">History</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+        <!--<div class="nav navbar-nav" style = "position: relative;">
+                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
+                    <h1 style="font-size: 25px; top: -45px; color: #66a182;">Request Extra Equipment</h1>
+        </div>-->
+    </div>
+</nav>
+<!--NAVBAR END-->
+
+    <ul class="breadcrumb">
+        <li><a href="home">Rider/Mover</a></li>
+        <li><a href="movenow-rider">Request a Ride</a></li>
+        <li><a href="vehicle">Select Vehicle</a></li>
+        <li>Request Extra Equipment</li>
+        <li>Request Mover</li>
+        <li>Confirmation</li>
+    </ul>
+    <div class="row top-buff" style= "text-align: center; color: #66a182; margin: 18px;">
+            <h1>Do you need extra equipment?</h1>
+        </div>
+        </div>
+
+<div class ="container"> 
+
+<form action="/request">
+    0 <input type="radio" name="bigBox" value="0">
+    1 <input type="radio" name="bigBox" value="1">
+    2 <input type="radio" name="bigBox" value="2">
+    3 <input type="radio" name="bigBox" value="3"> Big box
+    <br>
+    0 <input type="radio" name="smallBox" value="0">
+    1 <input type="radio" name="smallBox" value="1">
+    2 <input type="radio" name="smallBox" value="2">
+    3 <input type="radio" name="smallBox" value="3"> Small box
+    <br>
+    0 <input type="radio" name="tape" value="0">
+    1 <input type="radio" name="tape" value="1">
+    2 <input type="radio" name="tape" value="2">
+    3 <input type="radio" name="tape" value="3"> Tape
+    <br>
+    0 <input type="radio" name="twine" value="0">
+    1 <input type="radio" name="twine" value="1">
+    2 <input type="radio" name="twine" value="2">
+    3 <input type="radio" name="twine" value="3"> Twine
+    <br>
+    0 <input type="radio" name="bubbleWrap" value="0">
+    1 <input type="radio" name="bubbleWrap" value="1">
+    2 <input type="radio" name="bubbleWrap" value="2">
+    3 <input type="radio" name="bubbleWrap" value="3"> Bubble wrap
+    <br>
+    0 <input type="radio" name="tarp" value="0">
+    1 <input type="radio" name="tarp" value="1">
+    2 <input type="radio" name="tarp" value="2">
+    3 <input type="radio" name="tarp" value="3"> Tarp
+<br><br>
+<input type="submit" style="color: #66a182; position: relative; left: 90px; ">
+</form>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
