@@ -34,10 +34,13 @@ function createUser(e) {
 function madeUser(data) {
     //console.log(data);
     if(data) {
-        var newDoc = document.open("text/html", "replace");
-        newDoc.write(data);
-        newDoc.close();
-    } else {
-        window.location.href = "homeB";
+        if(data._id) {
+            localStorage.setItem("currentUser", data._id);
+            window.location.href = "homeB";
+        } else {
+            var newDoc = document.open("text/html", "replace");
+            newDoc.write(data);
+            newDoc.close();
+        }
     }
 }
