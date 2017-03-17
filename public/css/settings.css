@@ -45,7 +45,16 @@
 #updateAdd{
     text-align: center; 
     font-size:150%;
-    float:right;
+    float:left;
     margin:5px;
+}
+
+#btn{
+    position:static;
+    margin-bottom: 20px;
+}
+#address{
+    margin-top: 30px;
+
 }
 
