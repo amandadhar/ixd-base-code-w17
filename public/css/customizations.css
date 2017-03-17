@@ -45,7 +45,8 @@
 }
 
 #logo{
-    width: 20%;
+    width: 15%; 
+    display:inline-block;
 }
 
 .navbar{
@@ -56,6 +57,7 @@
 #title{
     font-size: 25px;
     color: #66a182;
+    display:inline;
 }
 
 #subtitle{
