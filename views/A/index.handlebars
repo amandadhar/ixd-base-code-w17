@@ -1,5 +1,7 @@
 <html>
 <head>
+<!-- Google Analytics Content Experiment code -->
+
     <title>WeHaul Demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +26,11 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="/">Logout</a></li>
                 </ul>
+                <div class="nav navbar-nav">
+                <img src="graphics/wehaul-logo.jpg" style="width: 15%; display:inline-block;">
+                    <h1 id="title" style="display:inline;">Home</h1>
+                </div>
             </div>
-            <!--<div class="nav navbar-nav" style = "position: relative;">
-                <img src="graphics/wehaul-logo.jpg" style="width: 20%;" align="left">
-            </div>-->
         </div>
     </nav>
 
@@ -39,6 +42,8 @@
         <li>Confirmation</li>
     </ul>
 
+    <div>
+    </div>
         <div class="row top-buff">
             <div class="col-xs-5" style="text-align: right;">
                 <h3 style= "color: #14cc60;">Rider</h3>
@@ -57,7 +62,7 @@
         <div class="row top-buff" style="text-align: center;">
             <div class="col-xs-3"></div>
             <div class="col-xs-6">
-                <a href="" class="btn btn-primary" id="moveNow" style="color: #66a182;"><b>Make A Ride Request</b></a>
+                <a href="" class="btn btn-primary jumbo-btn" id="moveNow"> <b>Make A Ride Request</b></a>
             </div>
             <div class="col-xs-3"></div>
         </div>
@@ -68,7 +73,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
     <script>
-        if(localStorage.getItem("currentUser") == null) {
+        /*if(localStorage.getItem("currentUser") == null) {
             window.location.href = "/"
         }
     </script>
@@ -77,11 +82,11 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
+      
       function trackGoogleAnalytics(){
         var date = formatAMPM();
-        ga('send', 'event', 'onLoad', 'startTime', date);
-        }
+        ga('send', 'event', 'onLoad', 'startTime', date); 
+        }    
       ga('create', 'UA-92514792-3', 'auto');
       ga('send', 'pageview');
 </script>
