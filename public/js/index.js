@@ -7,7 +7,7 @@ var rider = true;
 
 $(document).ready(function() {
     initPage();
-    formatAMPM();
+    //formatAMPM();
 });
 
 function initPage() {
@@ -41,7 +41,7 @@ function moveNow(e) {
 function formatAMPM() {
     var date = new Date();
     var hours = date.getHours();
-    var days = date.getDay(); 
+    var days = date.getDay();
     var minutes = date.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
     hours = hours % 12;

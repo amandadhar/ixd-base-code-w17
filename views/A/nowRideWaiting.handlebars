@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/customizations.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
-<body onpageshow="trackGoogleAnalytics">
+<body>
     <div class="container" style="text-align: center;">
         <h3 id="text">Finding Driver</h3>
         <div class="spinner"></div>
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xs-4"></div>
             <div class="col-xs-4">
-                <a class="btn btn-lg btn-default btn-block" id="cancel" onClick="trackCancel">Cancel Request</a>
+                <a class="btn btn-lg btn-default btn-block" id="cancel"">Cancel Request</a>
             </div>
             <div class="col-xs-4"></div>
         </div>
@@ -32,23 +32,5 @@
             window.location.href = "/"
         }
     </script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      function trackCancel(){
-        var cancel = true;
-        ga('send', 'event', 'onclick', cancel);
-      }
-      function trackGoogleAnalytics(){
-        var date = formatAMPM();
-        ga('send', 'event', 'onLoad', 'endTime', date);
-      }
-      ga('create', 'UA-92514792-3', 'auto');
-      ga('send', 'pageview');
-      ga('send', 'event', 'onclick', 'cancel', 'Cancel Request');
-</script>
 </body>
 </html>
