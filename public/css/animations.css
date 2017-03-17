@@ -64,7 +64,6 @@ input:checked + .slider:before {
     border-top: 16px solid #3498db;
     width: 200px;
     height: 200px;
-    margin-left: 41%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
