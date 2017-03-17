@@ -108,6 +108,7 @@ app.post('/movenow-delete', nowRide.deleteRide);
 
 
 //Design B gets and posts
+/*
 app.get('/B', desB.login);
 app.get('/registerB', desB.register);
 app.post('/registerB', desB.createUser);
@@ -119,7 +120,7 @@ app.get('/pickupB', desB.pickup);
 
 app.get('/settingsB', desB.settings);
 app.get('/historyB', desB.history);
-app.get('/helpB', desB.help);
+app.get('/helpB', desB.help);*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
